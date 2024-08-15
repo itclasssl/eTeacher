@@ -3,89 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Learning Hub - Comprehensive Educational Resources</title>
-    <meta name="description" content="Access a wide range of educational resources including videos, notes, and practice questions for various subjects and curricula. Perfect for students from grade 1 to university level.">
-    <meta name="keywords" content="student resources, learning materials, educational videos, study notes, practice questions, local curriculum, British curriculum, ICT courses">
+    <title>Student Learning Hub - Fun and Engaging Educational Resources</title>
+    <meta name="description" content="Access a wide range of fun and engaging educational resources including videos, notes, and practice questions for various subjects and curricula. Perfect for students from grade 1 to university level.">
+    <meta name="keywords" content="student resources, learning materials, educational videos, study notes, practice questions, fun learning, kids education">
     <meta name="author" content="Your Name or Organization">
     <link rel="canonical" href="https://yourusername.github.io/your-repo-name/">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://yourusername.github.io/your-repo-name/">
-    <meta property="og:title" content="Student Learning Hub - Comprehensive Educational Resources">
-    <meta property="og:description" content="Access a wide range of educational resources including videos, notes, and practice questions for various subjects and curricula. Perfect for students from grade 1 to university level.">
+    <meta property="og:title" content="Student Learning Hub - Fun and Engaging Educational Resources">
+    <meta property="og:description" content="Access a wide range of fun and engaging educational resources including videos, notes, and practice questions for various subjects and curricula. Perfect for students from grade 1 to university level.">
     <meta property="og:image" content="https://yourusername.github.io/your-repo-name/og-image.jpg">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://yourusername.github.io/your-repo-name/">
-    <meta name="twitter:title" content="Student Learning Hub - Comprehensive Educational Resources">
-    <meta name="twitter:description" content="Access a wide range of educational resources including videos, notes, and practice questions for various subjects and curricula. Perfect for students from grade 1 to university level.">
+    <meta name="twitter:title" content="Student Learning Hub - Fun and Engaging Educational Resources">
+    <meta name="twitter:description" content="Access a wide range of fun and engaging educational resources including videos, notes, and practice questions for various subjects and curricula. Perfect for students from grade 1 to university level.">
     <meta name="twitter:image" content="https://yourusername.github.io/your-repo-name/twitter-image.jpg">
 
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #24292e;
-            background-color: #fff;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            color: #333;
+            background-color: #000000;
             margin: 0;
             padding: 0;
         }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        h1, h2 {
-            border-bottom: 1px solid #eaecef;
-            padding-bottom: 10px;
-        }
-        .instructions {
-            background-color: #f6f8fa;
-            border: 1px solid #e1e4e8;
-            border-radius: 6px;
-            padding: 16px;
-            margin-bottom: 20px;
-        }
-        .subject, .category {
-            margin-bottom: 15px;
-        }
-        .subject-title, .category-title {
-            cursor: pointer;
-            background-color: #f6f8fa;
-            border: 1px solid #d1d5da;
-            border-radius: 3px;
-            padding: 10px;
-            font-weight: bold;
-        }
-        .subject-title {
-            background-color: #0366d6;
-            color: white;
-        }
-        .subject-content, .category-content {
-            display: none;
-            padding: 10px;
-            border: 1px solid #d1d5da;
-            border-top: none;
-            border-radius: 0 0 3px 3px;
-        }
-        ul {
-            list-style-type: none;
-            padding-left: 20px;
-            margin: 0;
-        }
-        a {
-            color: #0366d6;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
+
+        /* Navigation */
         .top-menu {
-            background-color: #24292e;
-            padding: 10px 0;
+            background-color: #000000;
+            color: white;
+            padding: 15px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
         }
+
         .menu-container {
             max-width: 1200px;
             margin: 0 auto;
@@ -93,63 +48,195 @@
             justify-content: space-between;
             align-items: center;
         }
+
         .menu-items {
             display: flex;
         }
+
         .menu-item {
             position: relative;
-            color: white;
-            padding: 10px 15px;
+            padding: 10px 20px;
             cursor: pointer;
+            transition: transform 0.2s;
         }
+
+        .menu-item a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
         .menu-item:hover {
-            background-color: #444d56;
+            background-color: #ff7043;
+            transform: translateY(-3px);
         }
+
         .sub-menu {
             display: none;
             position: absolute;
             top: 100%;
             left: 0;
-            background-color: #24292e;
+            background-color: #FF8C00;
             min-width: 200px;
             z-index: 1;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
         }
+
         .menu-item:hover > .sub-menu {
             display: block;
         }
-        .sub-menu .sub-menu {
-            left: 100%;
-            top: 0;
-        }
-        .sub-menu a, .sub-menu .menu-item {
+
+        .sub-menu a {
             color: white;
             padding: 10px 15px;
             display: block;
+            text-decoration: none;
+            transition: background-color 0.2s;
         }
-        .sub-menu a:hover, .sub-menu .menu-item:hover {
-            background-color: #444d56;
+
+        .sub-menu a:hover {
+            background-color: #ff7043;
         }
-        .social-links a {
+
+        /* Hero Section */
+        .hero {
+            background-image: url('https://yourimageurl.com/hero-image.jpg');
+            background-size: cover;
+            background-position: center;
             color: white;
-            margin-left: 10px;
+            text-align: center;
+            padding: 100px 20px;
+            box-shadow: inset 0px 0px 100px rgba(0, 0, 0, 0.5);
         }
+
+        .hero h1 {
+            font-size: 3em;
+            margin: 0 0 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin: 0 0 30px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero .btn {
+            background-color: #00C853;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 15px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.2s, transform 0.2s;
+        }
+
+        .hero .btn:hover {
+            background-color: #00A843;
+            transform: scale(1.05);
+        }
+
+        /* Subjects Section */
+        .subjects {
+            padding: 50px 20px;
+            background-color: #ffffff;
+        }
+
+        .subjects h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #E65100;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .subject-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .subject-card {
+            background-color: #bdb8b8;
+            border-radius: 15px;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .subject-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .subject-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .subject-card h3 {
+            margin: 20px 0;
+            font-size: 1.4em;
+            color: #3F51B5;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        .subject-card a {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            color: white;
+            background-color: #FF5722;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: background-color 0.2s, transform 0.2s;
+        }
+
+        .subject-card a:hover {
+            background-color: #E64A19;
+            transform: scale(1.1);
+        }
+
+        /* Responsive Menu */
         @media (max-width: 768px) {
             .menu-container {
                 flex-direction: column;
+                align-items: flex-start;
             }
+
             .menu-items {
                 flex-direction: column;
                 width: 100%;
             }
+
             .sub-menu {
                 position: static;
-                display: none;
             }
+
             .menu-item:hover > .sub-menu {
                 display: none;
             }
+
             .menu-item.active > .sub-menu {
                 display: block;
+            }
+
+            .hero {
+                padding: 60px 20px;
+            }
+
+            .hero h1 {
+                font-size: 2em;
+            }
+
+            .hero p {
+                font-size: 1em;
+            }
+
+            .hero .btn {
+                font-size: 1em;
             }
         }
     </style>
@@ -162,48 +249,9 @@
                 <div class="menu-item">
                     Courses
                     <div class="sub-menu">
-                        <div class="menu-item">
-                            Local
-                            <div class="sub-menu">
-                                <a href="#">Grade 1</a>
-                                <a href="#">Grade 2</a>
-                                <a href="#">Grade 3</a>
-                                <a href="#">Grade 4</a>
-                                <a href="#">Grade 5</a>
-                                <a href="Grade-6-NC-Eng.html">Grade 6</a>
-                                <a href="#">Grade 7</a>
-                                <a href="#">Grade 8</a>
-                                <a href="#">Grade 9</a>
-                                <a href="#">Grade 10</a>
-                                <a href="#">Grade 11</a>
-                                <a href="#">Grade 12</a>
-                            </div>
-                        </div>
-                        <div class="menu-item">
-                            British
-                            <div class="sub-menu">
-                                <a href="#">Grade 1</a>
-                                <a href="#">Grade 2</a>
-                                <a href="#">Grade 3</a>
-                                <a href="#">Grade 4</a>
-                                <a href="#">Grade 5</a>
-                                <a href="#">Grade 6</a>
-                                <a href="#">Grade 7</a>
-                                <a href="#">Grade 8</a>
-                                <a href="#">Grade 9</a>
-                                <a href="#">Grade 10</a>
-                                <a href="#">Grade 11</a>
-                                <a href="#">Grade 12</a>
-                            </div>
-                        </div>
-                        <div class="menu-item">
-                            ICT
-                            <div class="sub-menu">
-                                <a href="#">School</a>
-                                <a href="#">University</a>
-                                <a href="#">Professional</a>
-                            </div>
-                        </div>
+                        <a href="#">Local</a>
+                        <a href="#">British</a>
+                        <a href="#">ICT</a>
                     </div>
                 </div>
                 <div class="menu-item">
@@ -217,362 +265,50 @@
                 <div class="menu-item">
                     Services
                     <div class="sub-menu">
-                        <a href="#">Tutoring</a>
-                        <a href="#">Study Groups</a>
-                        <a href="#">Career Guidance</a>
+                        <a href="#">Online Tutoring</a>
+                        <a href="#">Homework Help</a>
                     </div>
                 </div>
-                <div class="menu-item">
-                    Contacts
-                    <div class="sub-menu">
-                        <a href="#">Email Us</a>
-                        <a href="#">Phone</a>
-                        <a href="#">Visit Us</a>
-                    </div>
-                </div>
+                <div class="menu-item"><a href="#">Contacts</a></div>
             </div>
-            <div class="social-links">
-                <a href="#" target="_blank" aria-label="Facebook">FB</a>
-                <a href="#" target="_blank" aria-label="Twitter">TW</a>
-                <a href="#" target="_blank" aria-label="Instagram">IG</a>
+            <div class="menu-items">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
     </nav>
 
-    <div class="container">
-        <!-- <h1>Student Learning Hub</h1> -->
-        
-        <div class="instructions">
-            <h3>Student Learning Hub</h3>
-            <ol>
-                <li>Navigate through the menu to find your curriculum and grade level.</li>
-                <li>Click Click on a subject to expand its content.</li>
-                <li>Within each subject, you'll find categories like Videos, Notes, and Practice Questions.</li>
-                <li>Click on each category to access the relevant materials.</li>
-                <li>Use the resources to enhance your learning and prepare for exams.</li>
-            </ol>
-        </div>
+    <section class="hero">
+        <h1>Welcome to the Student Learning Hub</h1>
+        <p>Your one-stop destination for fun and engaging educational resources!</p>
+        <a href="#" class="btn">Start Learning</a>
+    </section>
 
-        <!-- Mathematics -->
-        <div class="subject">
-            <div class="subject-title">Mathematics</div>
-            <div class="subject-content">
-                <div class="category">
-                    <div class="category-title">Videos</div>
-                    <div class="category-content">
-                        <ul>
-                            <li><a href="https://youtube.com/mathsbasics" target="_blank">Maths Basics</a></li>
-                            <li><a href="https://youtube.com/moreadvancedmaths" target="_blank">Advanced Mathematics</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="category">
-                    <div class="category-title">Notes</div>
-                    <div class="category-content">
-                        <ul>
-                            <li><a href="#">Basic Algebra</a></li>
-                            <li><a href="#">Calculus Fundamentals</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="category">
-                    <div class="category-title">Practice Questions</div>
-                    <div class="category-content">
-                        <ul>
-                            <li><a href="#">Algebra Practice</a></li>
-                            <li><a href="#">Geometry Problems</a></li>
-                        </ul>
-                    </div>
-                </div>
+    <section class="subjects">
+        <h2>Explore Our Subjects</h2>
+        <div class="subject-grid">
+            <div class="subject-card">
+                <img src="https://yourimageurl.com/maths.jpg" alt="Maths">
+                <h3>Maths</h3>
+                <a href="#">Explore Maths</a>
+            </div>
+            <div class="subject-card">
+                <img src="https://yourimageurl.com/science.jpg" alt="Science">
+                <h3>Science</h3>
+                <a href="#">Explore Science</a>
+            </div>
+            <div class="subject-card">
+                <img src="https://yourimageurl.com/history.jpg" alt="History">
+                <h3>History</h3>
+                <a href="#">Explore History</a>
+            </div>
+            <div class="subject-card">
+                <img src="https://yourimageurl.com/literature.jpg" alt="Literature">
+                <h3>Literature</h3>
+                <a href="#">Explore Literature</a>
             </div>
         </div>
-
-        <!-- Science -->
-        <div class="subject">
-            <div class="subject-title">Science</div>
-            <div class="subject-content">
-                <div class="category">
-                    <div class="category-title">Videos</div>
-                    <div class="category-content">
-                        <ul>
-                            <li><a href="https://youtube.com/physicsbasics" target="_blank">Physics Basics</a></li>
-                            <li><a href="https://youtube.com/biologylessons" target="_blank">Biology Lessons</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="category">
-                    <div class="category-title">Notes</div>
-                    <div class="category-content">
-                        <ul>
-                            <li><a href="#">Physics Concepts</a></li>
-                            <li><a href="#">Chemistry Essentials</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="category">
-                    <div class="category-title">Practice Questions</div>
-                    <div class="category-content">
-                        <ul>
-                            <li><a href="#">Physics Problems</a></li>
-                            <li><a href="#">Chemistry Practice</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Geography -->
-        <div class="subject">
-            <div class="subject-title">Geography</div>
-            <div class="subject-content">
-                <div class="category">
-                    <div class="category-title">Videos</div>
-                    <div class="category-content">
-                        <ul>
-                            <li><a href="#">Geography Basics</a></li>
-                            <li><a href="#">World Geography</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="category">
-                    <div class="category-title">Notes</div>
-                    <div class="category-content">
-                        <ul>
-                            <li><a href="#">Physical Geography</a></li>
-                            <li><a href="#">Human Geography</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="category">
-                    <div class="category-title">Practice Questions</div>
-                    <div class="category-content">
-                        <ul>
-                            <li><a href="#">Geography Practice</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Civic Education -->
-        <div class="subject">
-            <div class="subject-title">Civic Education</div>
-            <div class="subject-content">
-                <div class="category">
-                    <div class="category-title">Videos</div>
-                    <div class="category-content">
-                        <ul>
-                            <li><a href="#">Civic Lessons</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="category">
-                    <div class="category-title">Notes</div>
-                    <div class="category-content">
-                        <ul>
-                            <li><a href="#">Civic Concepts</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="category">
-                    <div class="category-title">Practice Questions</div>
-                    <div class="category-content">
-                        <ul>
-                            <li><a href="#">Civic Education Practice</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Health & Physical Education -->
-        <div class="subject">
-            <div class="subject-title">Health & Physical Education</div>
-            <div class="subject-content">
-                <div class="category">
-                    <div class="category-title">Videos</div>
-                    <div class="category-content">
-                        <ul>
-                            <li><a href="#">Health Education</a></li>
-                            <li><a href="#">Physical Fitness</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="category">
-                    <div class="category-title">Notes</div>
-                    <div class="category-content">
-                        <ul>
-                            <li><a href="#">Health Topics</a></li>
-                            <li><a href="#">Physical Education</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="category">
-                    <div class="category-title">Practice Questions</div>
-                    <div class="category-content">
-                        <ul>
-                            <li><a href="#">Health Education Practice</a></li>
-                            <li><a href="#">Physical Education Practice</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- English Language -->
-        <div class="subject">
-            <div class="subject-title">English Language</div>
-            <div class="subject-content">
-                <div class="category">
-                    <div class="category-title">Videos</div>
-                    <div class="category-content">
-                        <ul>
-                            <li><a href="#">English Grammar</a></li>
-                            <li><a href="#">English Literature</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="category">
-                    <div class="category-title">Notes</div>
-                    <div class="category-content">
-                        <ul>
-                            <li><a href="#">Grammar Rules</a></li>
-                            <li><a href="#">Literature Notes</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="category">
-                    <div class="category-title">Practice Questions</div>
-                    <div class="category-content">
-                        <ul>
-                            <li><a href="#">English Practice</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Sinhala Language -->
-        <div class="subject">
-            <div class="subject-title">Sinhala Language</div>
-            <div class="subject-content">
-                <div class="category">
-                    <div class="category-title">Videos</div>
-                    <div class="category-content">
-                        <ul>
-                            <li><a href="#">Sinhala Grammar</a></li>
-                            <li><a href="#">Sinhala Literature</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="category">
-                    <div class="category-title">Notes</div>
-                    <div class="category-content">
-                        <ul>
-                            <li><a href="#">Grammar Rules</a></li>
-                            <li><a href="#">Literature Notes</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="category">
-                    <div class="category-title">Practice Questions</div>
-                    <div class="category-content">
-                        <ul>
-                            <li><a href="#">Sinhala Practice</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Tamil Language -->
-        <div class="subject">
-            <div class="subject-title">Tamil Language</div>
-            <div class="subject-content">
-                <div class="category">
-                    <div class="category-title">Videos</div>
-                    <div class="category-content">
-                        <ul>
-                            <li><a href="#">Tamil Grammar</a></li>
-                            <li><a href="#">Tamil Literature</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="category">
-                    <div class="category-title">Notes</div>
-                    <div class="category-content">
-                        <ul>
-                            <li><a href="#">Grammar Rules</a></li>
-                            <li><a href="#">Literature Notes</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="category">
-                    <div class="category-title">Practice Questions</div>
-                    <div class="category-content">
-                        <ul>
-                            <li><a href="#">Tamil Practice</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Religion -->
-        <div class="subject">
-            <div class="subject-title">Religion</div>
-            <div class="subject-content">
-                <div class="category">
-                    <div class="category-title">Videos</div>
-                    <div class="category-content">
-                        <ul>
-                            <li><a href="#">Religious Teachings</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="category">
-                    <div class="category-title">Notes</div>
-                    <div class="category-content">
-                        <ul>
-                            <li><a href="#">Religious Studies</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="category">
-                    <div class="category-title">Practice Questions</div>
-                    <div class="category-content">
-                        <ul>
-                            <li><a href="#">Religion Practice</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-    <script>
-        document.querySelectorAll('.subject-title').forEach(function(subjectTitle) {
-            subjectTitle.addEventListener('click', function() {
-                const content = this.nextElementSibling;
-                if (content.style.display === "none" || content.style.display === "") {
-                    content.style.display = "block";
-                } else {
-                    content.style.display = "none";
-                }
-            });
-        });
-
-        document.querySelectorAll('.category-title').forEach(function(categoryTitle) {
-            categoryTitle.addEventListener('click', function() {
-                const content = this.nextElementSibling;
-                if (content.style.display === "none" || content.style.display === "") {
-                    content.style.display = "block";
-                } else {
-                    content.style.display = "none";
-                }
-            });
-        });
-    </script>
+    </section>
 </body>
 </html>
