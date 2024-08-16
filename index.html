@@ -6,9 +6,10 @@
     <title>Student Learning Hub - Fun and Engaging Educational Resources</title>
     <meta name="description" content="Access a wide range of fun and engaging educational resources including videos, notes, and practice questions for various subjects and curricula. Perfect for students from grade 1 to university level.">
     <meta name="keywords" content="student resources, learning materials, educational videos, study notes, practice questions, fun learning, kids education">
-    <meta name="author" content="Your Name or Organization">
+    <meta name="author" content="Free Online Classes">
     <link rel="canonical" href="https://ITClassSL.github.io/your-repo-name/">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -26,7 +27,7 @@
 
     <style>
         body {
-            font-family: 'Comic Sans MS', cursive, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
             color: #333;
             background-color: #000000;
             margin: 0;
@@ -200,23 +201,44 @@
         }
 
         /* Responsive Menu */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+
         @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
             .menu-container {
                 flex-direction: column;
                 align-items: flex-start;
             }
 
             .menu-items {
+                display: none;
                 flex-direction: column;
                 width: 100%;
             }
 
-            .sub-menu {
-                position: static;
+            .menu-items.active {
+                display: flex;
             }
 
-            .menu-item:hover > .sub-menu {
+            .menu-item {
+                width: 100%;
+                text-align: left;
+            }
+
+            .sub-menu {
+                position: static;
                 display: none;
+                width: 100%;
             }
 
             .menu-item.active > .sub-menu {
@@ -244,6 +266,7 @@
 <body>
     <nav class="top-menu">
         <div class="menu-container">
+            <button class="menu-toggle" aria-label="Toggle menu">☰</button>
             <div class="menu-items">
                 <div class="menu-item"><a href="index.html">Home</a></div>
                 <div class="menu-item">
@@ -262,6 +285,15 @@
                         <a href="Grade-6-NC-Eng.html">Career Guidance</a>
                     </div>
                 </div>
+                <div class="menu-item">
+                    Services
+                    <div class="sub-menu">
+                        <a href="https://localedxcelcambridgeictcomputerclass.blogspot.com/">Tutoring</a>
+                        <a href="https://localedxcelcambridgeictcomputerclass.blogspot.com/">Software Development</a>
+                        <a href="https://amithafzfoodntasty.blogspot.com/">Online Shopping</a>
+                        <a href="https://amithafzfoodntasty.blogspot.com/">Travel</a>
+                    </div>
+                </div>                
                 <div class="menu-item">
                     Contact
                     <div class="sub-menu">
@@ -315,5 +347,29 @@
     <footer>
         <p>&copy; 2024 Student Learning Hub. All rights reserved.</p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const menuItems = document.querySelector('.menu-items');
+            const menuItemsWithSubMenu = document.querySelectorAll('.menu-item');
+
+            menuToggle.addEventListener('click', function() {
+                menuItems.classList.toggle('active');
+            });
+
+            menuItemsWithSubMenu.forEach(item => {
+                item.addEventListener('click', function(e) {
+                    if (window.innerWidth <= 768) {
+                        const subMenu = this.querySelector('.sub-menu');
+                        if (subMenu) {
+                            e.preventDefault();
+                            this.classList.toggle('active');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
