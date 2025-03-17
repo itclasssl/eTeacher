@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Biology MCQ Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .header {
+            text-align: center;
+            padding: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .mcq {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .question {
+            font-weight: bold;
+            font-size: 1.1em;
+            color: #2E7D32;
+            margin-bottom: 15px;
+        }
+
+        .options {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .option {
+            margin: 10px 0;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .option:hover {
+            background-color: #f0f0f0;
+        }
+
+        .explanation {
+            background-color: #EEF5E9;
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 15px;
+            display: none;
+        }
+
+        .show-answer {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9em;
+        }
+
+        .show-answer:hover {
+            background-color: #45a049;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            color: #666;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            
+            .mcq {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>History Grade 7 Unit 1.1 Economy The people who lived in our countrye</h1>
+        <p>Test your knowledge about plant structures, functions, and classifications</p>
+    </div>
+
+    <div id="quiz-container">
+        <!-- MCQs will be inserted here by JavaScript -->
+    </div>
+
+    <div class="footer">
+        <p>© 2025 Plant Biology Quiz. All rights reserved.</p>
+        <p>Share this quiz with fellow biology enthusiasts!</p>
+    </div>
+
+    <script>
+        const quizData = {
+
+    "questions": [
+        {
+            "question": "Which of the following plants is an example of a monocotyledonous plant?",
+            "options": [
+                "Bean",
+                "Paddy",
+                "Cashew",
+                "Tamarind"
+            ],
+            "answer": 1,
+            "explanation": "Monocotyledonous plants, such as paddy (rice), have seeds with a single cotyledon (seed leaf)."
+        },
+        {
+            "question": "What is the primary difference between monocot and dicot seeds?",
+            "options": [
+                "Monocot seeds are larger than dicot seeds.",
+                "Monocot seeds have one cotyledon, while dicot seeds have two cotyledons.",
+                "Monocot seeds grow into trees, while dicot seeds grow into shrubs.",
+                "Monocot seeds are dispersed by water, while dicot seeds are dispersed by wind."
+            ],
+            "answer": 1,
+            "explanation": "The key difference between monocot and dicot seeds is the number of cotyledons: monocots have one cotyledon, while dicots have two."
+        },
+        {
+            "question": "Which of the following characteristics is typical of dicot plants?",
+            "options": [
+                "Fibrous root system",
+                "Parallel venation in leaves",
+                "Reticulate venation in leaves",
+                "Flowers with three petals or multiples of three"
+            ],
+            "answer": 2,
+            "explanation": "Dicot plants typically exhibit reticulate venation in their leaves, where veins form a net-like pattern."
+        },
+        {
+            "question": "Which of the following plants has a taproot system?",
+            "options": [
+                "Paddy",
+                "Maize",
+                "Arecanut",
+                "Bean"
+            ],
+            "answer": 3,
+            "explanation": "Dicot plants like beans typically have a taproot system, whereas monocots like paddy, maize, and arecanut have fibrous root systems."
+        },
+        {
+            "question": "How can you distinguish between monocot and dicot stems?",
+            "options": [
+                "Monocot stems are branched, while dicot stems are unbranched.",
+                "Monocot stems are unbranched, while dicot stems are branched.",
+                "Monocot stems are green, while dicot stems are brown.",
+                "Monocot stems have bark, while dicot stems do not."
+            ],
+            "answer": 1,
+            "explanation": "Monocot stems are typically unbranched, while dicot stems are branched."
+        },
+        {
+            "question": "What type of flower petal arrangement is characteristic of monocot plants?",
+            "options": [
+                "Four or five petals",
+                "Three petals or multiples of three",
+                "Six petals",
+                "No petals"
+            ],
+            "answer": 1,
+            "explanation": "Monocot plants typically have flowers with three petals or multiples of three."
+        },
+        {
+            "question": "Which of the following plants would most likely have parallel venation in its leaves?",
+            "options": [
+                "Mango",
+                "Coconut",
+                "Cashew",
+                "Tamarind"
+            ],
+            "answer": 1,
+            "explanation": "Plants like coconut, which are monocots, typically exhibit parallel venation in their leaves."
+        },
+        {
+            "question": "Which of the following is NOT a characteristic of monocot plants?",
+            "options": [
+                "Fibrous root system",
+                "Leaves with parallel venation",
+                "Flowers with four or five petals",
+                "Single cotyledon in the seed"
+            ],
+            "answer": 2,
+            "explanation": "Monocot plants typically have flowers with three petals or multiples of three, not four or five petals."
+        },
+        {
+            "question": "Which part of the plant shows the most significant structural difference between monocots and dicots?",
+            "options": [
+                "Flowers",
+                "Leaves",
+                "Roots",
+                "Stems"
+            ],
+            "answer": 2,
+            "explanation": "The leaves show the most significant structural difference, with monocots having parallel venation and dicots having reticulate venation."
+        },
+        {
+            "question": "What is the primary function of cotyledons in seeds?",
+            "options": [
+                "To protect the seed",
+                "To store food for the germinating seedling",
+                "To attract pollinators",
+                "To produce new seeds"
+            ],
+            "answer": 1,
+            "explanation": "Cotyledons primarily store food for the germinating seedling until it can photosynthesize on its own."
+        },
+        {
+            "question": "Which of the following plants is most likely to have an unbranched stem?",
+            "options": [
+                "Mango",
+                "Cashew",
+                "Coconut",
+                "Tamarind"
+            ],
+            "answer": 2,
+            "explanation": "Coconut, a monocot, typically has an unbranched stem, which is a common characteristic of monocot plants."
+        },
+        {
+            "question": "Which plant listed below would likely have compound leaves?",
+            "options": [
+                "ʻKitulʼ",
+                "ʻDanʼ/ʻNavalʼ",
+                "ʻKottambaʼ",
+                "Mimosa"
+            ],
+            "answer": 3,
+            "explanation": "Mimosa is known to have compound leaves, which consist of several leaflets attached to a single petiole."
+        },
+        {
+            "question": "Which of the following plants is an example of a non-flowering plant?",
+            "options": [
+                "ʻKitulʼ",
+                "Cycas",
+                "ʻMadu welʼ",
+                "Cashew"
+            ],
+            "answer": 1,
+            "explanation": "Cycads, like Cycas, are examples of non-flowering plants that do not produce flowers but reproduce via cones."
+        },
+        {
+            "question": "Which of the following plants would most likely have a fibrous root system?",
+            "options": [
+                "ʻDanʼ/ʻNavalʼ",
+                "Mango",
+                "ʻKottambaʼ",
+                "Cashew"
+            ],
+            "answer": 2,
+            "explanation": "Plants like mango, which are dicots, typically have a taproot system, not a fibrous root system."
+        },
+        {
+            "question": "Select one major difference between the roots of monocot and dicot plants.",
+            "options": [
+                "Monocots have a taproot system, while dicots have a fibrous root system.",
+                "Monocots have a fibrous root system, while dicots have a taproot system.",
+                "Monocot roots are aerial, while dicot roots are underground.",
+                "Monocot roots store food, while dicot roots do not."
+            ],
+            "answer": 1,
+            "explanation": "Monocots typically have a fibrous root system, while dicots have a taproot system."
+        }
+    ]
+}
+
+    
+        ;
+
+        function createQuizHTML() {
+            const container = document.getElementById('quiz-container');
+            
+            quizData.questions.forEach((q, index) => {
+                const mcqDiv = document.createElement('div');
+                mcqDiv.className = 'mcq';
+                
+                const questionHTML = `
+                    <div class="question">Question ${index + 1}: ${q.question}</div>
+                    <div class="options">
+                        ${q.options.map((opt, i) => `
+                            <div class="option" onclick="selectOption(this, ${index}, ${i})">
+                                ${String.fromCharCode(65 + i)}. ${opt}
+                            </div>
+                        `).join('')}
+                    </div>
+                    <button class="show-answer" onclick="showExplanation(${index})">Show Explanation</button>
+                    <div class="explanation" id="explanation-${index}">
+                        <strong>Correct Answer:</strong> ${String.fromCharCode(65 + q.answer)}
+                        <br><br>
+                        <strong>Explanation:</strong> ${q.explanation}
+                    </div>
+                `;
+                
+                mcqDiv.innerHTML = questionHTML;
+                container.appendChild(mcqDiv);
+            });
+        }
+
+        function selectOption(element, questionIndex, optionIndex) {
+            // Remove previous selections
+            const options = element.parentElement.children;
+            for (let opt of options) {
+                opt.style.backgroundColor = '';
+                opt.style.color = '';
+            }
+            
+            // Highlight selected option
+            element.style.backgroundColor = '#4CAF50';
+            element.style.color = 'white';
+            
+            // Show if correct
+            const isCorrect = optionIndex === quizData.questions[questionIndex].answer;
+            setTimeout(() => {
+                alert(isCorrect ? 'Correct!' : 'Incorrect. Try again!');
+            }, 200);
+        }
+
+        function showExplanation(index) {
+            const explanation = document.getElementById(`explanation-${index}`);
+            if (explanation.style.display === 'block') {
+                explanation.style.display = 'none';
+            } else {
+                explanation.style.display = 'block';
+            }
+        }
+
+        // Initialize the quiz
+        createQuizHTML();
+    </script>
+</body>
+</html>
