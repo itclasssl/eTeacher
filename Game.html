@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Doll Dress-Up Game</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: #f0f0f0;
+      padding: 20px;
+    }
+    #game-area {
+      position: relative;
+      width: 300px;
+      height: 500px;
+      background: #fff;
+      border: 2px solid #ccc;
+      margin-bottom: 20px;
+    }
+    #doll {
+      width: 100%;
+      height: 100%;
+      background-image: url('elsa_doll.jpg'); /* replace with a better doll image */
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: relative;
+    }
+    .dress {
+      width: 100px;
+      height: 100px;
+      margin: 10px;
+      border: 2px solid #aaa;
+      display: inline-block;
+      cursor: grab;
+    }
+    .dress img {
+      width: 100%;
+    }
+    .dropped-dress {
+      position: absolute;
+      top: 100px;
+      left: 100px;
+      width: 100px;
+      height: 100px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Doll Dress-Up Game</h2>
+  <div id="game-area">
+    <div id="doll"></div>
+  </div>
+
+  <div>
+    <label for="color-picker">Choose dress color: </label>
+    <input type="color" id="color-picker" value="#ff69b4" />
+  </div>
+
+  <h3>Drag a dress onto the doll:</h3>
+  <div id="dress-options">
+    <div class="dress" draggable="true" data-type="plazo">
+      <img src="https://i.imgur.com/kVbEMTx.png" alt="Plazo Pant" />
+    </div>
+    <div class="dress" draggable="true" data-type="skirt">
+      <img src="https://i.imgur.com/57w2cL4.png" alt="Skirt Plazo" />
+    </div>
+    <div class="dress" draggable="true" data-type="sarong">
+      <img src="https://i.imgur.com/WdjWv4U.png" alt="Sarong" />
+    </div>
+    <div class="dress" draggable="true" data-type="shawl">
+      <img src="https://i.imgur.com/WxlhgEX.png" alt="Shawl" />
+    </div>
+    <div class="dress" draggable="true" data-type="shalwar">
+      <img src="https://i.imgur.com/sDLMbrk.png" alt="Shalwar" />
+    </div>
+  </div>
+
+  <script>
+    const doll = document.getElementById('doll');
+    const colorPicker = document.getElementById('color-picker');
+
+    document.querySelectorAll('.dress').forEach(dress => {
+      dress.addEventListener('dragstart', e => {
+        e.dataTransfer.setData('text/plain', dress.querySelector('img').src);
+      });
+    });
+
+    doll.addEventListener('dragover', e => e.preventDefault());
+
+    doll.addEventListener('drop', e => {
+      e.preventDefault();
+      const imageUrl = e.dataTransfer.getData('text/plain');
+
+      const dressElement = document.createElement('img');
+      dressElement.src = imageUrl;
+      dressElement.classList.add('dropped-dress');
+      dressElement.style.filter = `hue-rotate(${getHueRotation(colorPicker.value)}deg)`;
+
+      doll.innerHTML = ''; // remove previous dress
+      doll.appendChild(dressElement);
+    });
+
+    colorPicker.addEventListener('input', () => {
+      const droppedDress = doll.querySelector('.dropped-dress');
+      if (droppedDress) {
+        droppedDress.style.filter = `hue-rotate(${getHueRotation(colorPicker.value)}deg)`;
+      }
+    });
+
+    function getHueRotation(hex) {
+      const r = parseInt(hex.substr(1, 2), 16);
+      const g = parseInt(hex.substr(3, 2), 16);
+      const b = parseInt(hex.substr(5, 2), 16);
+      const avg = (r + g + b) / 3;
+      return (avg / 255) * 360;
+    }
+  </script>
+</body>
+</html>
