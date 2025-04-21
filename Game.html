@@ -2,121 +2,78 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Doll Dress-Up Game</title>
+  <title>Plazo Pant Dressup Game</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      font-family: sans-serif;
+      text-align: center;
       background: #f0f0f0;
-      padding: 20px;
     }
-    #game-area {
+    #canvasContainer {
       position: relative;
-      width: 300px;
-      height: 500px;
-      background: #fff;
-      border: 2px solid #ccc;
-      margin-bottom: 20px;
-    }
-    #doll {
-      width: 100%;
-      height: 100%;
-      background-image: url('elsa_doll.jpg'); /* replace with a better doll image */
-      background-size: contain;
-      background-repeat: no-repeat;
-      position: relative;
-    }
-    .dress {
-      width: 100px;
-      height: 100px;
-      margin: 10px;
-      border: 2px solid #aaa;
       display: inline-block;
-      cursor: grab;
+      margin-top: 20px;
     }
-    .dress img {
-      width: 100%;
+    canvas {
+      border: 2px solid #ccc;
+      max-width: 90%;
     }
-    .dropped-dress {
-      position: absolute;
-      top: 100px;
-      left: 100px;
-      width: 100px;
-      height: 100px;
+    .colors {
+      margin-top: 20px;
+    }
+    .color-box {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      margin: 5px;
+      border: 2px solid #999;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
-  <h2>Doll Dress-Up Game</h2>
-  <div id="game-area">
-    <div id="doll"></div>
+  <h1>Plazo Pant Dress-Up Game</h1>
+  <div id="canvasContainer">
+    <canvas id="pantCanvas" width="768" height="1152"></canvas>
   </div>
-
-  <div>
-    <label for="color-picker">Choose dress color: </label>
-    <input type="color" id="color-picker" value="#ff69b4" />
-  </div>
-
-  <h3>Drag a dress onto the doll:</h3>
-  <div id="dress-options">
-    <div class="dress" draggable="true" data-type="plazo">
-      <img src="https://i.imgur.com/kVbEMTx.png" alt="Plazo Pant" />
-    </div>
-    <div class="dress" draggable="true" data-type="skirt">
-      <img src="https://i.imgur.com/57w2cL4.png" alt="Skirt Plazo" />
-    </div>
-    <div class="dress" draggable="true" data-type="sarong">
-      <img src="https://i.imgur.com/WdjWv4U.png" alt="Sarong" />
-    </div>
-    <div class="dress" draggable="true" data-type="shawl">
-      <img src="https://i.imgur.com/WxlhgEX.png" alt="Shawl" />
-    </div>
-    <div class="dress" draggable="true" data-type="shalwar">
-      <img src="https://i.imgur.com/sDLMbrk.png" alt="Shalwar" />
-    </div>
-  </div>
+  <div class="colors" id="colorPicker"></div>
 
   <script>
-    const doll = document.getElementById('doll');
-    const colorPicker = document.getElementById('color-picker');
+    const colors = [
+      "#000000", "#2e2e72", "#cc9900", "#ff0000", "#00ff00", "#0000ff",
+      "#ff69b4", "#800000", "#ff8c00", "#008080", "#800080", "#808000",
+      "#c0c0c0", "#ffffff", "#add8e6"
+    ];
 
-    document.querySelectorAll('.dress').forEach(dress => {
-      dress.addEventListener('dragstart', e => {
-        e.dataTransfer.setData('text/plain', dress.querySelector('img').src);
-      });
+    const colorPicker = document.getElementById("colorPicker");
+    const canvas = document.getElementById("pantCanvas");
+    const ctx = canvas.getContext("2d");
+
+    const baseImage = new Image();
+    baseImage.src = 'PlazoPantCey.png'; // use the correct path in your folder
+
+    baseImage.onload = () => {
+      ctx.drawImage(baseImage, 0, 0, canvas.width, canvas.height);
+    };
+
+    colors.forEach(color => {
+      const box = document.createElement("div");
+      box.className = "color-box";
+      box.style.backgroundColor = color;
+      box.addEventListener("click", () => applyColorOverlay(color));
+      colorPicker.appendChild(box);
     });
 
-    doll.addEventListener('dragover', e => e.preventDefault());
+    function applyColorOverlay(color) {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.drawImage(baseImage, 0, 0, canvas.width, canvas.height);
 
-    doll.addEventListener('drop', e => {
-      e.preventDefault();
-      const imageUrl = e.dataTransfer.getData('text/plain');
-
-      const dressElement = document.createElement('img');
-      dressElement.src = imageUrl;
-      dressElement.classList.add('dropped-dress');
-      dressElement.style.filter = `hue-rotate(${getHueRotation(colorPicker.value)}deg)`;
-
-      doll.innerHTML = ''; // remove previous dress
-      doll.appendChild(dressElement);
-    });
-
-    colorPicker.addEventListener('input', () => {
-      const droppedDress = doll.querySelector('.dropped-dress');
-      if (droppedDress) {
-        droppedDress.style.filter = `hue-rotate(${getHueRotation(colorPicker.value)}deg)`;
-      }
-    });
-
-    function getHueRotation(hex) {
-      const r = parseInt(hex.substr(1, 2), 16);
-      const g = parseInt(hex.substr(3, 2), 16);
-      const b = parseInt(hex.substr(5, 2), 16);
-      const avg = (r + g + b) / 3;
-      return (avg / 255) * 360;
+      // Simulate color overlay on pant area only (approximate region)
+      ctx.fillStyle = color;
+      ctx.globalAlpha = 0.5;
+      // Region: x, y, width, height (adjust these values based on your image)
+      ctx.fillRect(150, 400, 470, 700);
+      ctx.globalAlpha = 1.0;
     }
   </script>
 </body>
