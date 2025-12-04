@@ -349,3 +349,8 @@ a:hover {
     transform: scale(1.05);
     text-decoration: none;
 }
+
+.hero .text-3d,
+.hero .text-3d-p {
+    color: black !important;
+}
