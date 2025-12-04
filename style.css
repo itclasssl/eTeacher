@@ -14,7 +14,8 @@ body {
     padding: 20px;
 }
 
-h1, h2 {
+h1,
+h2 {
     border-bottom: 1px solid #eaecef;
     padding-bottom: 10px;
 }
@@ -84,10 +85,10 @@ a:hover {
     background-color: #000000;
     min-width: 200px;
     z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.menu-item:hover > .sub-menu {
+.menu-item:hover>.sub-menu {
     display: block;
 }
 
@@ -126,38 +127,47 @@ a:hover {
     .menu-container {
         flex-wrap: wrap;
     }
+
     .menu-toggle {
         display: block;
     }
+
     .menu-items {
         display: none;
         flex-direction: column;
         width: 100%;
         background-color: #000000;
     }
+
     .menu-items.active {
         display: flex;
     }
+
     .menu-item {
         width: 100%;
         box-sizing: border-box;
     }
+
     .sub-menu {
         position: static;
         display: none;
         box-shadow: none;
         padding-left: 20px;
     }
+
     .sub-menu .sub-menu {
         padding-left: 20px;
     }
+
     /* Disable hover on mobile, rely on click/active */
-    .menu-item:hover > .sub-menu {
+    .menu-item:hover>.sub-menu {
         display: none;
     }
-    .menu-item.expanded > .sub-menu {
+
+    .menu-item.expanded>.sub-menu {
         display: block;
     }
+
     .social-links {
         margin-top: 10px;
     }
@@ -172,11 +182,13 @@ a:hover {
     margin-bottom: 20px;
 }
 
-.subject, .category {
+.subject,
+.category {
     margin-bottom: 15px;
 }
 
-.subject-title, .category-title {
+.subject-title,
+.category-title {
     cursor: pointer;
     background-color: #f6f8fa;
     border: 1px solid #d1d5da;
@@ -190,7 +202,8 @@ a:hover {
     color: white;
 }
 
-.subject-content, .category-content {
+.subject-content,
+.category-content {
     display: none;
     padding: 10px;
     border: 1px solid #d1d5da;
@@ -200,7 +213,8 @@ a:hover {
 
 /* Index Page Specific Styles */
 .hero {
-    background-image: url('https://yourimageurl.com/hero-image.jpg'); /* Placeholder URL from original file */
+    background-image: url('https://yourimageurl.com/hero-image.jpg');
+    /* Placeholder URL from original file */
     background-size: cover;
     background-position: center;
     color: white;
@@ -213,13 +227,49 @@ a:hover {
     font-size: 3em;
     margin: 0 0 20px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    border-bottom: none; /* Override base h1 style */
+    border-bottom: none;
+    /* Override base h1 style */
 }
 
 .hero p {
     font-size: 1.2em;
     margin: 0 0 30px;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.text-3d {
+    color: black;
+    text-shadow:
+        0 1px 0 #ccc,
+        0 2px 0 #c9c9c9,
+        0 3px 0 #bbb,
+        0 4px 0 #b9b9b9,
+        0 5px 0 #aaa,
+        0 6px 1px rgba(0, 0, 0, .1),
+        0 0 5px rgba(0, 0, 0, .1),
+        0 1px 3px rgba(0, 0, 0, .3),
+        0 3px 5px rgba(0, 0, 0, .2),
+        0 5px 10px rgba(0, 0, 0, .25),
+        0 10px 10px rgba(0, 0, 0, .2),
+        0 20px 20px rgba(0, 0, 0, .15);
+}
+
+.text-3d-p {
+    color: black;
+    font-weight: bold;
+    text-shadow:
+        0 1px 0 #ccc,
+        0 2px 0 #c9c9c9,
+        0 3px 0 #bbb,
+        0 4px 0 #b9b9b9,
+        0 5px 0 #aaa,
+        0 6px 1px rgba(0, 0, 0, .1),
+        0 0 5px rgba(0, 0, 0, .1),
+        0 1px 3px rgba(0, 0, 0, .3),
+        0 3px 5px rgba(0, 0, 0, .2),
+        0 5px 10px rgba(0, 0, 0, .25),
+        0 10px 10px rgba(0, 0, 0, .2),
+        0 20px 20px rgba(0, 0, 0, .15);
 }
 
 .hero .btn {
