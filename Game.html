@@ -3,33 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <title>Plazo Pant Dressup Game</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      text-align: center;
-      background: #f0f0f0;
-    }
-    #canvasContainer {
-      position: relative;
-      display: inline-block;
-      margin-top: 20px;
-    }
-    canvas {
-      border: 2px solid #ccc;
-      max-width: 90%;
-    }
-    .colors {
-      margin-top: 20px;
-    }
-    .color-box {
-      display: inline-block;
-      width: 30px;
-      height: 30px;
-      margin: 5px;
-      border: 2px solid #999;
-      cursor: pointer;
-    }
-  </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <h1>Plazo Pant Dress-Up Game</h1>
@@ -38,43 +13,6 @@
   </div>
   <div class="colors" id="colorPicker"></div>
 
-  <script>
-    const colors = [
-      "#000000", "#2e2e72", "#cc9900", "#ff0000", "#00ff00", "#0000ff",
-      "#ff69b4", "#800000", "#ff8c00", "#008080", "#800080", "#808000",
-      "#c0c0c0", "#ffffff", "#add8e6"
-    ];
-
-    const colorPicker = document.getElementById("colorPicker");
-    const canvas = document.getElementById("pantCanvas");
-    const ctx = canvas.getContext("2d");
-
-    const baseImage = new Image();
-    baseImage.src = 'PlazoPantCey.png'; // use the correct path in your folder
-
-    baseImage.onload = () => {
-      ctx.drawImage(baseImage, 0, 0, canvas.width, canvas.height);
-    };
-
-    colors.forEach(color => {
-      const box = document.createElement("div");
-      box.className = "color-box";
-      box.style.backgroundColor = color;
-      box.addEventListener("click", () => applyColorOverlay(color));
-      colorPicker.appendChild(box);
-    });
-
-    function applyColorOverlay(color) {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.drawImage(baseImage, 0, 0, canvas.width, canvas.height);
-
-      // Simulate color overlay on pant area only (approximate region)
-      ctx.fillStyle = color;
-      ctx.globalAlpha = 0.5;
-      // Region: x, y, width, height (adjust these values based on your image)
-      ctx.fillRect(150, 400, 470, 700);
-      ctx.globalAlpha = 1.0;
-    }
-  </script>
+    <script src="main.js"></script>
 </body>
 </html>

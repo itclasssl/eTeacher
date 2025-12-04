@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Learning Hub - Grade 5 English Medium Subjects Classes and Notes</title>
-    <meta name="description" content="Grade 5 British Curriculum Access a wide range of educational resources including videos, notes, and practice questions for various subjects and curricula. Perfect for students from grade 1 to university level.">
-    <meta name="keywords" content="Grade 5 British Curriculum student resources, learning materials, educational videos, study notes, practice questions, local curriculum, British curriculum, ICT courses">
+    <meta name="description"
+        content="Grade 5 British Curriculum Access a wide range of educational resources including videos, notes, and practice questions for various subjects and curricula. Perfect for students from grade 1 to university level.">
+    <meta name="keywords"
+        content="Grade 5 British Curriculum student resources, learning materials, educational videos, study notes, practice questions, local curriculum, British curriculum, ICT courses">
     <meta name="author" content="Your Name or Organization">
     <link rel="canonical" href="https://itclasssl.github.io/eTeacher/">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -14,236 +17,28 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://itclasssl.github.io/eTeacher/">
     <meta property="og:title" content="Student Learning Hub - Grade 5 British Curriculum">
-    <meta property="og:description" content="Grade 5 British Curriculum Access a wide range of educational resources including videos, notes, and practice questions for various subjects and curricula. Perfect for students from grade 1 to university level.">
+    <meta property="og:description"
+        content="Grade 5 British Curriculum Access a wide range of educational resources including videos, notes, and practice questions for various subjects and curricula. Perfect for students from grade 1 to university level.">
     <meta property="og:image" content="https://itclasssl.github.io/eTeacher/og-image.jpg">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://itclasssl.github.io/eTeacher/">
     <meta name="twitter:title" content="Student Learning Hub - Grade 3 British Curriculum">
-    <meta name="twitter:description" content="Grade 3 British Curriculum Access a wide range of educational resources including videos, notes, and practice questions for various subjects and curricula. Perfect for students from grade 1 to university level.">
+    <meta name="twitter:description"
+        content="Grade 3 British Curriculum Access a wide range of educational resources including videos, notes, and practice questions for various subjects and curricula. Perfect for students from grade 1 to university level.">
     <meta name="twitter:image" content="https://itclasssl.github.io/eTeacher/twitter-image.jpg">
 
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #000000;
-            background-color: #fff;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        h1, h2 {
-            border-bottom: 1px solid #eaecef;
-            padding-bottom: 10px;
-        }
-        .instructions {
-            background-color: #f6f8fa;
-            border: 1px solid #e1e4e8;
-            border-radius: 6px;
-            padding: 6px;
-            margin-bottom: 20px;
-        }
-        .subject, .category {
-            margin-bottom: 15px;
-        }
-        .subject-title, .category-title {
-            cursor: pointer;
-            background-color: #f6f8fa;
-            border: 1px solid #d1d5da;
-            border-radius: 3px;
-            padding: 10px;
-            font-weight: bold;
-        }
-        .subject-title {
-            background-color: #0366d6;
-            color: white;
-        }
-        .subject-content, .category-content {
-            display: none;
-            padding: 10px;
-            border: 1px solid #d1d5da;
-            border-top: none;
-            border-radius: 0 0 3px 3px;
-        }
-        ul {
-            list-style-type: none;
-            padding-left: 20px;
-            margin: 0;
-        }
-        a {
-            color: #0366d6;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .top-menu {
-            background-color: #000000;
-            padding: 10px 0;
-        }
-        .menu-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .menu-items {
-            display: flex;
-        }
-        .menu-item {
-            position: relative;
-            color: white;
-            padding: 10px 15px;
-            cursor: pointer;
-        }
-        .menu-item:hover {
-            background-color: #444d56;
-        }
-        .sub-menu {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background-color: #000000;
-            min-width: 200px;
-            z-index: 1;
-        }
-        .menu-item:hover > .sub-menu {
-            display: block;
-        }
-        .sub-menu .sub-menu {
-            left: 100%;
-            top: 0;
-        }
-        .sub-menu a, .sub-menu .menu-item {
-            color: white;
-            padding: 10px 15px;
-            display: block;
-        }
-        .sub-menu a:hover, .sub-menu .menu-item:hover {
-            background-color: #444d56;
-        }
-        .social-links a {
-            color: white;
-            margin-left: 10px;
-        }
-        @media (max-width: 768px) {
-            .menu-container {
-                flex-direction: column;
-            }
-            .menu-items {
-                flex-direction: column;
-                width: 100%;
-            }
-            .sub-menu {
-                position: static;
-                display: none;
-            }
-            .menu-item:hover > .sub-menu {
-                display: none;
-            }
-            .menu-item.active > .sub-menu {
-                display: block;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <nav class="top-menu">
-        <div class="menu-container">
-            <div class="menu-items">
-                <div class="menu-item"><a href="index.html">Home</a></div>
-                <div class="menu-item">
-                    Courses
-                    <div class="sub-menu">
-                        <div class="menu-item">
-                            Local syllabus >
-                            <div class="sub-menu">
-                                <a href="#">Grade 1</a>
-                                <a href="#">Grade 2</a>
-                                <a href="#">Grade 3</a>
-                                <a href="#">Grade 4</a>
-                                <a href="Grade-6-NC-Eng.html">Grade 5 ></a>
-                                <a href="Grade-6-NC-Eng.html">Grade 6 ></a>
-                                <a href="Grade-7-NC-Eng.html">Grade 7 ></a>
-                                <a href="#">Grade 8</a>
-                                <a href="#">Grade 9</a>
-                                <a href="#">Grade 10</a>
-                                <a href="#">Grade 11</a>
-                                <a href="#">Grade 12</a>
-                            </div>
-                        </div>
-                        <div class="menu-item">
-                            British Curriculum
-                            <div class="sub-menu">
-                                <a href="#">Grade 1</a>
-                                <a href="#">Grade 2</a>
-                                <a href="Grade-3-BC.html">Grade 3 ></a>
-                                <a href="#">Grade 4</a>
-                                <a href="Grade-5-BC.html">Grade 5 ></a>
-                                <a href="#">Grade 6</a>
-                                <a href="#">Grade 7</a>
-                                <a href="#">Grade 8</a>
-                                <a href="#">Grade 9</a>
-                                <a href="#">Grade 10</a>
-                                <a href="#">Grade 11</a>
-                                <a href="#">Grade 12</a>
-                            </div>
-                        </div>
-                        <div class="menu-item">
-                            ICT
-                            <div class="sub-menu">
-                                <a href="#">School</a>
-                                <a href="#">University</a>
-                                <a href="Grade-IT-Professional.html">Professional</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    Posts
-                    <div class="sub-menu">
-                        <a href="#">Latest News</a>
-                        <a href="#">Study Tips</a>
-                        <a href="Kids-Robotics.html">Student Life</a>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    Services
-                    <div class="sub-menu">
-                        <a href="https://localedxcelcambridgeictcomputerclass.blogspot.com/">Tutoring</a>
-                        <a href="https://localedxcelcambridgeictcomputerclass.blogspot.com/">Software Development</a>
-                        <a href="Online-Shopping.html">Online Business</a>
-                        <a href="Travel-Sri-Lanka.html">Travel</a>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    Contacts
-                    <div class="sub-menu">
-                        <a href="#">Email Us</a>
-                        <a href="#">Phone</a>
-                        <a href="#">Visit Us</a>
-                    </div>
-                </div>
-            </div>
-            <div class="social-links">
-                <a href="https://web.facebook.com/itclasssrilanka" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://computerclassinsrilanka.wordpress.com" target="_blank" aria-label="Wordpress"><i class="fab fa-wordpress"></i></a>
-                <a href="https://www.youtube.com/channel/UCJojbxGV0sfU1QPWhRxx4-A" target="_blank" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
-            </div>
-        </div>
-    </nav>
+    <nav class="top-menu"></nav>
+    <script src="navbar.js"></script>
 
     <div class="container">
         <!-- <h1>Student Learning Hub</h1> -->
-        
+
         <div class="instructions">
             <h3>Grade 5 British Curriculum</h3>
         </div>
@@ -256,22 +51,23 @@
                     <div class="category-title">Videos</div>
                     <div class="category-content">
                         <ul>
-                            <li><a href="https://youtu.be/yEK5MyTbzJw" target="_blank">🌍 1 Importance of Water </a></li>   
+                            <li><a href="https://youtu.be/yEK5MyTbzJw" target="_blank">🌍 1 Importance of Water </a>
+                            </li>
                             <li><a href="https://youtu.be/HO6hoLbzRoM" target="_blank">🌍 Water everywhere </a></li>
-                            <li><a href="https://youtu.be/AU7w5mXBCXI" target="_blank">🌍 The Water Supply </a></li> 
-                            <li><a href="https://youtu.be/I4hZBEYk3Zo" target="_blank">🌍 The Desert </a></li> 
-                            <li><a href="https://youtu.be/7glxNUqNDBk" target="_blank">🌍 The Drought</a></li> 
-                            <li><a href="https://youtu.be/rWvO_0Ba0Mw" target="_blank">🌍 The Clean Water</a></li>   
-                            <li><a href="https://youtu.be/VBOzXDu-BkU" target="_blank">🌍 Who Owns Water</a></li>  
-                            <li><a href="https://youtu.be/AppbD1V4mf4" target="_blank">🌍 2 Transportation </a></li>   
-                            <li><a href="https://youtu.be/xLqx90ADKW8" target="_blank">🌍 Roads </a></li> 
-                            <li><a href="https://youtu.be/ypz8gLccBeY" target="_blank">🌍 Traffic </a></li>     
-                            <li><a href="https://youtu.be/jKF-x_Uunuk" target="_blank">🌍 Traffic Problems </a></li> 
-                            <li><a href="https://youtu.be/mzhcERI_wuU" target="_blank">🌍 Why New Roads </a></li>  
-                            <li><a href="https://youtu.be/JPj0BZOKIrs" target="_blank">🌍 3 Coastal </a></li>   
-                            <li><a href="https://youtu.be/2cr02424Vzk" target="_blank">🌍 Ocean movements </a></li>    
-                            <li><a href="https://youtu.be/1iQWqQaYcUE" target="_blank">🌍 Woves work </a></li>     
-                            <li><a href="https://youtu.be/3p3Qq9lnu6c" target="_blank">🌍 Beaches </a></li>               
+                            <li><a href="https://youtu.be/AU7w5mXBCXI" target="_blank">🌍 The Water Supply </a></li>
+                            <li><a href="https://youtu.be/I4hZBEYk3Zo" target="_blank">🌍 The Desert </a></li>
+                            <li><a href="https://youtu.be/7glxNUqNDBk" target="_blank">🌍 The Drought</a></li>
+                            <li><a href="https://youtu.be/rWvO_0Ba0Mw" target="_blank">🌍 The Clean Water</a></li>
+                            <li><a href="https://youtu.be/VBOzXDu-BkU" target="_blank">🌍 Who Owns Water</a></li>
+                            <li><a href="https://youtu.be/AppbD1V4mf4" target="_blank">🌍 2 Transportation </a></li>
+                            <li><a href="https://youtu.be/xLqx90ADKW8" target="_blank">🌍 Roads </a></li>
+                            <li><a href="https://youtu.be/ypz8gLccBeY" target="_blank">🌍 Traffic </a></li>
+                            <li><a href="https://youtu.be/jKF-x_Uunuk" target="_blank">🌍 Traffic Problems </a></li>
+                            <li><a href="https://youtu.be/mzhcERI_wuU" target="_blank">🌍 Why New Roads </a></li>
+                            <li><a href="https://youtu.be/JPj0BZOKIrs" target="_blank">🌍 3 Coastal </a></li>
+                            <li><a href="https://youtu.be/2cr02424Vzk" target="_blank">🌍 Ocean movements </a></li>
+                            <li><a href="https://youtu.be/1iQWqQaYcUE" target="_blank">🌍 Woves work </a></li>
+                            <li><a href="https://youtu.be/3p3Qq9lnu6c" target="_blank">🌍 Beaches </a></li>
                         </ul>
                     </div>
                 </div>
@@ -279,23 +75,40 @@
                     <div class="category-title">Notes</div>
                     <div class="category-content">
                         <ul>
-                            <li><a href="https://www.linkedin.com/pulse/grade5-geography-lesson-10-importance-water-british-amithafz-kr2hc/" target="_blank">🌍 1 Importance of Water</a></li>
-                            <li><a href="https://www.linkedin.com/pulse/oxford-international-primary-geography-student-book-5-amithafz-cmdde" target="_blank">🌍 Water everywhere</a></li>
-                            <li><a href="https://www.linkedin.com/pulse/water-supply-geography-grade5-exam-mcq-questions-fill-amithafz-5wphc" target="_blank">🌍 The Water Supply</a></li>
-                            <li><a href="https://www.linkedin.com/pulse/geography-grade5-13-desert-study-qa-pack-students-mcq-amithafz-qpq2c" target="_blank">🌍 The Desert</a></li>
-                            <li><a href="https://www.linkedin.com/pulse/grade5-geography-english-medium-chapter14-tropical-amithafz-iyy7c" target="_blank">🌍 The Rain Forest</a></li>
-                            <li><a href="https://www.linkedin.com/pulse/grade5-geography-english-medium-chapter-15-question-amithafz-ts7lc/" target="_blank">🌍 The Drought</a></li>
-                            <li><a href="https://www.linkedin.com/pulse/grade5-geography-english-medium-safe-water-unit-1-q-amithafz-swvic" target="_blank">🌍 The Clean Water</a></li>
-                            <li><a href="https://www.linkedin.com/pulse/geography-grade5-chapter1-english-medium-lesson-who-amithafz-qjivc" target="_blank">🌍 Who owns water</a></li>
-                            <li><a href="https://www.linkedin.com/pulse/geography-grade5-unit2-english-medium-transport-topic-amithafz-gfrwc" target="_blank">🌍 2 Transportation </a></li>
-                            <li><a href="https://www.linkedin.com/pulse/geography-grade5-unit21-english-medium-notes-question-amithafz-ihc9c" target="_blank">🌍 Roads </a></li>
-                            <li><a href="https://www.linkedin.com/pulse/geography-fifth-grade-traffic-problems-section-broken-amithafz-je2rc" target="_blank">🌍 Traffic </a></li> 
-                            <li><a href="https://www.linkedin.com/pulse/solving-traffic-problems-topic-broken-clear-bullet-so-amithafz-j2htc" target="_blank">🌍 Traffic Problems </a></li> 
-                            <li><a href="https://www.linkedin.com/pulse/geography-grade5-do-we-want-new-road-flashcards-mcqs-amithafz-rptxc" target="_blank">🌍 Why New Roads </a></li> 
-                            <li><a href="https://www.linkedin.com/pulse/grade5-geography-unit3-coasts-lesson-rewritten-bullet-amithafz-irelc" target="_blank">🌍 3 Coastal </a></li> 
-                            <li><a href="https://www.linkedin.com/pulse/geography-english-medium-grade5-movements-ocean-notes-amithafz-yrapc" target="_blank">🌍 Ocean movements </a></li> 
-                            <li><a href="https://www.linkedin.com/pulse/waves-work-geography-grade5-lession3-easy-to-learn-amithafz-ppuzc/" target="_blank">🌍 Woves work </a></li> 
-                            <li><a href="https://www.linkedin.com/pulse/geography-grade5-beaches-so-its-easier-learn-revise-amithafz-efi9c" target="_blank">🌍 Beaches </a></li>               
+                            <li><a href="https://www.linkedin.com/pulse/grade5-geography-lesson-10-importance-water-british-amithafz-kr2hc/"
+                                    target="_blank">🌍 1 Importance of Water</a></li>
+                            <li><a href="https://www.linkedin.com/pulse/oxford-international-primary-geography-student-book-5-amithafz-cmdde"
+                                    target="_blank">🌍 Water everywhere</a></li>
+                            <li><a href="https://www.linkedin.com/pulse/water-supply-geography-grade5-exam-mcq-questions-fill-amithafz-5wphc"
+                                    target="_blank">🌍 The Water Supply</a></li>
+                            <li><a href="https://www.linkedin.com/pulse/geography-grade5-13-desert-study-qa-pack-students-mcq-amithafz-qpq2c"
+                                    target="_blank">🌍 The Desert</a></li>
+                            <li><a href="https://www.linkedin.com/pulse/grade5-geography-english-medium-chapter14-tropical-amithafz-iyy7c"
+                                    target="_blank">🌍 The Rain Forest</a></li>
+                            <li><a href="https://www.linkedin.com/pulse/grade5-geography-english-medium-chapter-15-question-amithafz-ts7lc/"
+                                    target="_blank">🌍 The Drought</a></li>
+                            <li><a href="https://www.linkedin.com/pulse/grade5-geography-english-medium-safe-water-unit-1-q-amithafz-swvic"
+                                    target="_blank">🌍 The Clean Water</a></li>
+                            <li><a href="https://www.linkedin.com/pulse/geography-grade5-chapter1-english-medium-lesson-who-amithafz-qjivc"
+                                    target="_blank">🌍 Who owns water</a></li>
+                            <li><a href="https://www.linkedin.com/pulse/geography-grade5-unit2-english-medium-transport-topic-amithafz-gfrwc"
+                                    target="_blank">🌍 2 Transportation </a></li>
+                            <li><a href="https://www.linkedin.com/pulse/geography-grade5-unit21-english-medium-notes-question-amithafz-ihc9c"
+                                    target="_blank">🌍 Roads </a></li>
+                            <li><a href="https://www.linkedin.com/pulse/geography-fifth-grade-traffic-problems-section-broken-amithafz-je2rc"
+                                    target="_blank">🌍 Traffic </a></li>
+                            <li><a href="https://www.linkedin.com/pulse/solving-traffic-problems-topic-broken-clear-bullet-so-amithafz-j2htc"
+                                    target="_blank">🌍 Traffic Problems </a></li>
+                            <li><a href="https://www.linkedin.com/pulse/geography-grade5-do-we-want-new-road-flashcards-mcqs-amithafz-rptxc"
+                                    target="_blank">🌍 Why New Roads </a></li>
+                            <li><a href="https://www.linkedin.com/pulse/grade5-geography-unit3-coasts-lesson-rewritten-bullet-amithafz-irelc"
+                                    target="_blank">🌍 3 Coastal </a></li>
+                            <li><a href="https://www.linkedin.com/pulse/geography-english-medium-grade5-movements-ocean-notes-amithafz-yrapc"
+                                    target="_blank">🌍 Ocean movements </a></li>
+                            <li><a href="https://www.linkedin.com/pulse/waves-work-geography-grade5-lession3-easy-to-learn-amithafz-ppuzc/"
+                                    target="_blank">🌍 Woves work </a></li>
+                            <li><a href="https://www.linkedin.com/pulse/geography-grade5-beaches-so-its-easier-learn-revise-amithafz-efi9c"
+                                    target="_blank">🌍 Beaches </a></li>
                         </ul>
                     </div>
                 </div>
@@ -303,8 +116,7 @@
                     <div class="category-title">Practice Questions</div>
                     <div class="category-content">
                         <ul>
-                            <li><a href="#">Physics Problems</a></li>
-                            <li><a href="#">Chemistry Practice</a></li>
+                            <li><a href="#">Geography Practice</a></li>
                         </ul>
                     </div>
                 </div>
@@ -319,9 +131,11 @@
                     <div class="category-title">Videos</div>
                     <div class="category-content">
                         <ul>
-                            <li><a href="https://youtu.be/xKhqXmq-USI" target="_blank">Introduction to Life in the Information Age</a>
-                            <li><a href="https://youtu.be/MH7uMLhM0jI" target="_blank">Digital Divide Online Services</a></li>                            
-                            <li><a href="https://youtu.be/a-Ze3E6ASfA" target="_blank">Living In The Digital World </li>                            
+                            <li><a href="https://youtu.be/xKhqXmq-USI" target="_blank">Introduction to Life in the
+                                    Information Age</a>
+                            <li><a href="https://youtu.be/MH7uMLhM0jI" target="_blank">Digital Divide Online
+                                    Services</a></li>
+                            <li><a href="https://youtu.be/a-Ze3E6ASfA" target="_blank">Living In The Digital World </li>
                             <li><a href="https://youtu.be/SGpsKgRhHCk" target="_blank">Digital Divide </a>%</li>
                         </ul>
                     </div>
@@ -354,16 +168,23 @@
                     <div class="category-title">Videos</div>
                     <div class="category-content">
                         <ul>
-                            <li><a href="https://youtu.be/vxovcnCv5DY" target="_blank">1 The River Nile</a></li>    
-                            <li><a href="https://youtu.be/vZUTrnfMLxs" target="_blank">Egyptian Farming</a></li> 
-                            <li><a href="https://youtu.be/vdCQJ4iY4gQ" target="_blank">Life in Ancient Egypt</a></li> 
-                            <li><a href="https://youtu.be/RQQX4aQz7mA" target="_blank">Tombs-treasures</a></li>
-                            <li><a href="https://youtu.be/gz74fmbQmJk" target="_blank">Egyptian Influence</a></li>  
-                            <li><a href="https://youtu.be/iN74Vju-Amc" target="_blank">2 Ancient Greeks</a></li> 
-                            <li><a href="https://youtu.be/HrFhFNczFtE" target="_blank">All-day-history</a></li>    
-                            <li><a href="https://youtu.be/_TI6T-71vwg" target="_blank">Life in Ancient Greece</a></li> 
-                            <li><a href="https://youtu.be/djRc12foMO8" target="_blank">Greek Battles</a></li> 
-                            <li><a href="https://youtu.be/Un-c8LGyA7Y" target="_blank">Greek Trade Art</a></li> 
+                            <li><a href="https://youtube.com/shorts/Hc13EPDQxJg?feature=share" target="_blank">1
+                                    Defining History</a></li>
+                            <li><a href="https://youtu.be/PRWDoz5TMwA" target="_blank">1.1 What Is History?</a></li>
+                            <li><a href="https://youtu.be/IoxqiXU4Oic" target="_blank">1.2 How to Study History</a></li>
+                            <li><a href="https://youtube.com/shorts/sTdbEBT_Xhg?feature=share" target="_blank">1.3
+                                    Benefits of Learning History </a></li>
+                            <li><a href="https://youtu.be/YUq6a9raxs4" target="_blank">1.4 How Does History Measure
+                                    Time? </a></li>
+                            <li><a href="https://youtu.be/YUq6a9raxs4" target="_blank">2 Ancient Man</a></li>
+                            <li><a href="https://youtu.be/kk4iv94Kol4" target="_blank">2.1 The Environment Where Man's
+                                    Origin Took Place</a></li>
+                            <li><a href="https://youtu.be/MwAAzRWs_EQ" target="_blank">2.2 The Evolution of Ancient
+                                    Man</a></li>
+                            <li><a href="https://youtu.be/gs2UiREFNdc" target="_blank">2.3 The Cultural Evolution of
+                                    Man</a></li>
+                            <li><a href="https://youtu.be/kme1lqRHemU" target="_blank">2.3 The Agriculture Civilization
+                                    of Man</a></li>
                         </ul>
                     </div>
                 </div>
@@ -371,16 +192,8 @@
                     <div class="category-title">Notes</div>
                     <div class="category-content">
                         <ul>
-                            <li><a href="https://www.linkedin.com/pulse/nile-secret-egypts-ancient-power-grade-5-history-term-amithafz-cz7xc" target="_blank">1 The River Nile</a></li>  
-                            <li><a href="https://www.linkedin.com/pulse/secrets-ancient-egyptian-farming-trade-revealed-amithafz-mz1gc">Egyptian Farming</a></li>
-                            <li><a href="https://www.linkedin.com/pulse/everyday-life-ancient-egypt-13-grade5-history-simple-amithafz-g3qbc" target="_blank">Life in Ancient Egypt</a></li>
-                            <li><a href="https://www.linkedin.com/pulse/14-tombs-treasures-well-organized-attractive-study-amithafz-8resc" target="_blank">Tombs-treasures</a></li>
-                            <li><a href="https://www.linkedin.com/pulse/15-egyptian-influence-organized-attractive-way-grade5-amithafz-wx2ec" target="_blank">The Egyptian Influence</a></li>
-                            <li><a href="https://www.linkedin.com/pulse/who-were-ancient-greeks-what-greek-called-today-known-amithafz-0cnnc" target="_blank">2 Ancient Greeks</a></li>     
-                            <li><a href="https://www.linkedin.com/pulse/what-did-ancient-greeks-do-all-day-history-grade5-amithafz-za0fc" target="_blank">All-day-history</a></li> 
-                            <li><a href="https://www.linkedin.com/pulse/23-everyday-life-ancient-greece-what-like-live-bbc-amithafz-gp29c/" target="_blank">Life in Ancient Greece</a></li> 
-                            <li><a href="https://www.linkedin.com/pulse/ancient-greek-battles-unraveling-intricate-strategies-amithafz-chhic" target="_blank">Greek Battles</a></li>
-                            <li><a href="https://www.linkedin.com/pulse/trade-art-ideas-study-guide-notes-flashcards-joining-amithafz-cdkyc" target="_blank">Greek Trade Art</a></li> 
+                            <li><a href="#">Physical Geography</a></li>
+                            <li><a href="#">Human Geography</a></li>
                         </ul>
                     </div>
                 </div>
@@ -397,19 +210,38 @@
 
         <!-- Civic Education -->
         <div class="subject">
-            <div class="subject-title">Science</div>
+            <div class="subject-title">Civic Education</div>
             <div class="subject-content">
                 <div class="category">
                     <div class="category-title">Videos</div>
                     <div class="category-content">
                         <ul>
-                            <li><a href="https://youtu.be/hwqIe3BtJyI" target="_blank">1 Flowering-plants</a></li>                         
-                            <li><a href="https://youtu.be/IPKdVws7VPA" target="_blank"> Seeds Travel, Grow</a></li>
-                            <li><a href="https://youtu.be/xbuNk32wxUc" target="_blank"> Pollinating Flowers</a></li>
-                            <li><a href="https://youtu.be/kQqiqAaDJbc" target="_blank"> Flowers-detail-parts-functions</a></li>
-                            <li><a href="https://youtu.be/wV3g-eWdcKo" target="_blank"> Growing-beautiful-flowers</a></li>
-                            <li><a href="https://youtu.be/nrTUu_Niou0" target="_blank"> Seeds-dark-what-do</a></li>
-                            <li><a href="https://youtu.be/zID7iOwClvQ" target="_blank"> Growing with lights</a></li>
+                            <li><a href="https://youtu.be/kzOUIwbYIbI" target="_blank">1.1 History of our School</a>
+                            </li>
+                            <li><a href="https://youtu.be/j9gNrhAf5PA" target="_blank">1.2 Let us inquire on the
+                                    organizational structure of the school</a></li>
+                            <li><a href="https://youtu.be/sNPmxOqT-7w" target="_blank">1.3. I myself enquire information
+                                    regarding me</a></li>
+                            <li><a href="https://youtu.be/UPikDfbHkT0" target="_blank">1.4 Let us work to a plan</a>
+                            </li>
+                            <li><a href="https://youtu.be/6J_jK0b4O8g" target="_blank">1.5 School Culture</a></li>
+                            <li><a href="https://youtube.com/shorts/Hc13EPDQxJg?feature=share" target="_blank">1.6
+                                    Vision of our school</a></li>
+                            <li><a href="https://youtu.be/nkkdTPeaFCY" target="_blank">1.7 Implementing duties between
+                                    teachers and students</a></li>
+                            <li><a href="https://youtube.com/shorts/sTdbEBT_Xhg?feature=share" target="_blank">1.8. The
+                                    bond between the school and society</a></li>
+                            <li><a href="https://youtu.be/NDEhVA3aDCs" target="_blank">2.1 The Region We Live in Sri
+                                    Lanka</a></li>
+                            <li><a href="https://youtu.be/I82nivHVOXY" target="_blank">2.1 Grama Niladhari's
+                                    Division</a></li>
+                            <li><a href="https://youtu.be/HOp0fZpwAR0" target="_blank">2.1 How the value of the human
+                                    resources can be increased</a></li>
+                            <li><a href="https://youtu.be/SHsMKg4aoto" target="_blank">2.2 Living co–operatively with
+                                    the people of the area</a></li>
+                            <li><a href="https://youtu.be/BnEJ7587Yyc" target="_blank">2.3 Those who help us </a></li>
+                            <li><a href="https://youtu.be/QLz1EkOxiAc" target="_blank">2.4 Duties of the institutions
+                                    that provide us with services</a></li>
                         </ul>
                     </div>
                 </div>
@@ -417,13 +249,7 @@
                     <div class="category-title">Notes</div>
                     <div class="category-content">
                         <ul>
-                            <li><a href="https://www.linkedin.com/pulse/explanation-structure-flowering-plants-science-grade5-amithafz-fsflc" target="_blank">1 Flowering-plants</a></li>  
-                            <li><a href="https://www.linkedin.com/pulse/observing-seeds-think-back-grade5-science-chapter1-amithafz-6dskc/" target="_blank"> Seeds Travel, Grow</a></li>
-                            <li><a href="https://www.linkedin.com/pulse/pollinating-flowers-insect-pollen-pollination-anther-amithafz-eklnc" target="_blank"> Pollinating Flowers</a></li>
-                            <li><a href="https://www.linkedin.com/pulse/looking-flowers-detail-parts-flower-functions-science-amithafz-nvlmc" target="_blank"> Flowers-detail-parts-functions</a></li>
-                            <li><a href="https://www.linkedin.com/pulse/unbelievable-growing-beautiful-flowers-shortsvide-amithafz-p6hlc/" target="_blank"> Growing-beautiful-flowers</a></li>
-                            <li><a href="https://www.linkedin.com/pulse/seeds-dark-what-do-really-need-grow-dp-education-amithafz-wc6oc" target="_blank"> Seeds-dark-what-do</a></li>
-                            <li><a href="https://www.linkedin.com/pulse/grade-5-science-dp-education-english-medium-term-exam-amithafz-o8r6c" target="_blank"> Growing with lights</a></li>
+                            <li><a href="#">Civic Concepts</a></li>
                         </ul>
                     </div>
                 </div>
@@ -440,20 +266,16 @@
 
         <!-- Health & Physical Education -->
         <div class="subject">
-            <div class="subject-title">ICT</div>
+            <div class="subject-title">Health & Physical Education</div>
             <div class="subject-content">
                 <div class="category">
                     <div class="category-title">Videos</div>
                     <div class="category-content">
                         <ul>
-                            <li><a href="https://youtu.be/4powxzGd6ms" target="_blank">1 Input Devices</a></li>
-                            <li><a href="https://youtube.com/shorts/GPd-jDjFY0I">output-devices</a></li>
-                            <li><a href="https://youtube.com/shorts/8_N5ox_GtBQ">main-components-computer-system</a></li>
-                            <li><a href="https://youtube.com/shorts/u5FFZa4HA4M?feature=share">Types of software</a></li>
-                            <li><a href="https://youtube.com/shorts/jHVFjG3HgJc?feature=share">Systems software</a></li>
-                            <li><a href="https://youtube.com/shorts/V80OhOs2QsQ?feature=share">Application software</a></li>
-                            <li><a href="https://youtube.com/shorts/VE0wN_mFKbw">Software vs Hardware</a></li>
-                            <li><a href="https://youtube.com/shorts/jwi2MkS6hRQ">Windows Operating System</a></li>
+                            <li><a href="https://youtu.be/cJSJYyqvZbc" target="_blank">1.1 Physical well-being</a></li>
+                            <li><a href="https://youtu.be/nbWHu3NCGx0" target="_blank">1.2 Mental well-being</a></li>
+                            <li><a href="https://youtu.be/sNPmxOqT-7w" target="_blank">1.3. zz</a></li>
+                            <li><a href="https://youtu.be/UPikDfbHkT0" target="_blank">1.4 zz</a></li>
                         </ul>
                     </div>
                 </div>
@@ -461,10 +283,8 @@
                     <div class="category-title">Notes</div>
                     <div class="category-content">
                         <ul>
-                            <li><a href="https://www.linkedin.com/pulse/computer-hardware-input-devices-ict-git-bit-grade5-amithafz-kpircs" target="_blank">1 Input Devices</a></li>
-                            <li><a href="https://www.linkedin.com/pulse/output-devices-computer-examples-input-5-pdf-amithafz-hyn0c">output-devices</a></li>
-                            <li><a href="https://www.linkedin.com/pulse/main-components-computer-system-ict-git-bit-online-amithafz-fewyc">main-components-computer-system</a></li>
-                            <li><a href="https://www.linkedin.com/pulse/two-main-categories-software-systems-system-grade5-amithafz-diu3c/">Types of software</a></li>
+                            <li><a href="#">Health Topics</a></li>
+                            <li><a href="#">Physical Education</a></li>
                         </ul>
                     </div>
                 </div>
@@ -473,6 +293,7 @@
                     <div class="category-content">
                         <ul>
                             <li><a href="#">Health Education Practice</a></li>
+                            <li><a href="#">Physical Education Practice</a></li>
                         </ul>
                     </div>
                 </div>
@@ -488,10 +309,9 @@
                     <div class="category-title">Videos</div>
                     <div class="category-content">
                         <ul>
-                            <li><a href="https://amithafzfoodntasty.blogspot.com/2025/01/addition-learning-game-app-for-grade-4.html" target="_blank">Addition Game</a></li>
-                            <li><a href="https://amithafzfoodntasty.blogspot.com/2025/01/subtraction-learning-game-app-for-grade.html" target="_blank">Subtraction Game</a></li>                            
-                            <li><a href="https://amithafzfoodntasty.blogspot.com/2025/01/multiplication-learning-game-grade-4.html target="_blank">Multiplication Game</a></li>
-                            <li><a href="https://amithafzfoodntasty.blogspot.com/2025/01/division-learning-game-app-for-grade-4.html" target="_blank">Division Game</a></li>
+                            <li><a href="https://youtube.com/mathsbasics" target="_blank">Maths Basics</a></li>
+                            <li><a href="https://youtube.com/moreadvancedmaths" target="_blank">Advanced Mathematics</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -524,7 +344,7 @@
                     <div class="category-title">Videos</div>
                     <div class="category-content">
                         <ul>
-                            <li><a href="https://amithafzfoodntasty.blogspot.com/2025/01/english-dictation-words-for-grade4-kids.html">English Dictation Game</a></li>
+                            <li><a href="#">English Grammar</a></li>
                             <li><a href="#">English Literature</a></li>
                         </ul>
                     </div>
@@ -648,28 +468,7 @@
 
     </div>
 
-    <script>
-        document.querySelectorAll('.subject-title').forEach(function(subjectTitle) {
-            subjectTitle.addEventListener('click', function() {
-                const content = this.nextElementSibling;
-                if (content.style.display === "none" || content.style.display === "") {
-                    content.style.display = "block";
-                } else {
-                    content.style.display = "none";
-                }
-            });
-        });
-
-        document.querySelectorAll('.category-title').forEach(function(categoryTitle) {
-            categoryTitle.addEventListener('click', function() {
-                const content = this.nextElementSibling;
-                if (content.style.display === "none" || content.style.display === "") {
-                    content.style.display = "block";
-                } else {
-                    content.style.display = "none";
-                }
-            });
-        });
-    </script>
+    <script src="main.js"></script>
 </body>
+
 </html>
