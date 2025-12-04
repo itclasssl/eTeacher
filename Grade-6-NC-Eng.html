@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Learning Hub - Grade 6 English Medium Subjects Classes and Notes</title>
-    <meta name="description" content="Access a wide range of educational resources including videos, notes, and practice questions for various subjects and curricula. Perfect for students from grade 1 to university level.">
-    <meta name="keywords" content="student resources, learning materials, educational videos, study notes, practice questions, local curriculum, British curriculum, ICT courses">
+    <meta name="description"
+        content="Access a wide range of educational resources including videos, notes, and practice questions for various subjects and curricula. Perfect for students from grade 1 to university level.">
+    <meta name="keywords"
+        content="student resources, learning materials, educational videos, study notes, practice questions, local curriculum, British curriculum, ICT courses">
     <meta name="author" content="Your Name or Organization">
     <link rel="canonical" href="https://itclasssl.github.io/eTeacher/">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -14,14 +17,16 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://itclasssl.github.io/eTeacher/">
     <meta property="og:title" content="Student Learning Hub - Comprehensive Educational Resources">
-    <meta property="og:description" content="Access a wide range of educational resources including videos, notes, and practice questions for various subjects and curricula. Perfect for students from grade 1 to university level.">
+    <meta property="og:description"
+        content="Access a wide range of educational resources including videos, notes, and practice questions for various subjects and curricula. Perfect for students from grade 1 to university level.">
     <meta property="og:image" content="https://itclasssl.github.io/eTeacher/og-image.jpg">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://itclasssl.github.io/eTeacher/">
     <meta name="twitter:title" content="Student Learning Hub - Comprehensive Educational Resources">
-    <meta name="twitter:description" content="Access a wide range of educational resources including videos, notes, and practice questions for various subjects and curricula. Perfect for students from grade 1 to university level.">
+    <meta name="twitter:description"
+        content="Access a wide range of educational resources including videos, notes, and practice questions for various subjects and curricula. Perfect for students from grade 1 to university level.">
     <meta name="twitter:image" content="https://itclasssl.github.io/eTeacher/twitter-image.jpg">
 
     <style>
@@ -33,15 +38,19 @@
             margin: 0;
             padding: 0;
         }
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
         }
-        h1, h2 {
+
+        h1,
+        h2 {
             border-bottom: 1px solid #eaecef;
             padding-bottom: 10px;
         }
+
         .instructions {
             background-color: #f6f8fa;
             border: 1px solid #e1e4e8;
@@ -49,10 +58,14 @@
             padding: 6px;
             margin-bottom: 20px;
         }
-        .subject, .category {
+
+        .subject,
+        .category {
             margin-bottom: 15px;
         }
-        .subject-title, .category-title {
+
+        .subject-title,
+        .category-title {
             cursor: pointer;
             background-color: #f6f8fa;
             border: 1px solid #d1d5da;
@@ -60,33 +73,41 @@
             padding: 10px;
             font-weight: bold;
         }
+
         .subject-title {
             background-color: #0366d6;
             color: white;
         }
-        .subject-content, .category-content {
+
+        .subject-content,
+        .category-content {
             display: none;
             padding: 10px;
             border: 1px solid #d1d5da;
             border-top: none;
             border-radius: 0 0 3px 3px;
         }
+
         ul {
             list-style-type: none;
             padding-left: 20px;
             margin: 0;
         }
+
         a {
             color: #0366d6;
             text-decoration: none;
         }
+
         a:hover {
             text-decoration: underline;
         }
+
         .top-menu {
             background-color: #000000;
             padding: 10px 0;
         }
+
         .menu-container {
             max-width: 1200px;
             margin: 0 auto;
@@ -94,18 +115,22 @@
             justify-content: space-between;
             align-items: center;
         }
+
         .menu-items {
             display: flex;
         }
+
         .menu-item {
             position: relative;
             color: white;
             padding: 10px 15px;
             cursor: pointer;
         }
+
         .menu-item:hover {
             background-color: #444d56;
         }
+
         .sub-menu {
             display: none;
             position: absolute;
@@ -115,135 +140,66 @@
             min-width: 200px;
             z-index: 1;
         }
-        .menu-item:hover > .sub-menu {
+
+        .menu-item:hover>.sub-menu {
             display: block;
         }
+
         .sub-menu .sub-menu {
             left: 100%;
             top: 0;
         }
-        .sub-menu a, .sub-menu .menu-item {
+
+        .sub-menu a,
+        .sub-menu .menu-item {
             color: white;
             padding: 10px 15px;
             display: block;
         }
-        .sub-menu a:hover, .sub-menu .menu-item:hover {
+
+        .sub-menu a:hover,
+        .sub-menu .menu-item:hover {
             background-color: #444d56;
         }
+
         .social-links a {
             color: white;
             margin-left: 10px;
         }
+
         @media (max-width: 768px) {
             .menu-container {
                 flex-direction: column;
             }
+
             .menu-items {
                 flex-direction: column;
                 width: 100%;
             }
+
             .sub-menu {
                 position: static;
                 display: none;
             }
-            .menu-item:hover > .sub-menu {
+
+            .menu-item:hover>.sub-menu {
                 display: none;
             }
-            .menu-item.active > .sub-menu {
+
+            .menu-item.active>.sub-menu {
                 display: block;
             }
         }
     </style>
 </head>
+
 <body>
-    <nav class="top-menu">
-        <div class="menu-container">
-            <div class="menu-items">
-                <div class="menu-item"><a href="index.html">Home</a></div>
-                <div class="menu-item">
-                    Courses
-                    <div class="sub-menu">
-                        <div class="menu-item">
-                            Local syllabus >
-                            <div class="sub-menu">
-                                <a href="#">Grade 1</a>
-                                <a href="#">Grade 2</a>
-                                <a href="#">Grade 3</a>
-                                <a href="#">Grade 4</a>
-                                <a href="Grade-5-NC-Eng.html">Grade 5 ></a>
-                                <a href="Grade-6-NC-Eng.html">Grade 6 ></a>
-                                <a href="Grade-7-NC-Eng.html">Grade 7 ></a>
-                                <a href="#">Grade 8</a>
-                                <a href="#">Grade 9</a>
-                                <a href="#">Grade 10</a>
-                                <a href="#">Grade 11</a>
-                                <a href="#">Grade 12</a>
-                            </div>
-                        </div>
-                        <div class="menu-item">
-                            British Curriculum
-                            <div class="sub-menu">
-                                <a href="#">Grade 1</a>
-                                <a href="#">Grade 2</a>
-                                <a href="Grade-3-BC.html">Grade 3</a>
-                                <a href="#">Grade 4</a>
-                                <a href="#">Grade 5</a>
-                                <a href="#">Grade 6</a>
-                                <a href="#">Grade 7</a>
-                                <a href="#">Grade 8</a>
-                                <a href="#">Grade 9</a>
-                                <a href="#">Grade 10</a>
-                                <a href="#">Grade 11</a>
-                                <a href="#">Grade 12</a>
-                            </div>
-                        </div>
-                        <div class="menu-item">
-                            ICT
-                            <div class="sub-menu">
-                                <a href="#">School</a>
-                                <a href="#">University</a>
-                                <a href="#">Professional</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    Posts
-                    <div class="sub-menu">
-                        <a href="#">Latest News</a>
-                        <a href="#">Study Tips</a>
-                        <a href="Kids-Robotics.html">Student Life</a>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    Services
-                    <div class="sub-menu">
-                        <a href="https://localedxcelcambridgeictcomputerclass.blogspot.com/">Tutoring</a>
-                        <a href="https://localedxcelcambridgeictcomputerclass.blogspot.com/">Software Development</a>
-                        <a href="Online-Shopping.html">Online Business</a>
-                        <a href="Travel-Sri-Lanka.html">Travel</a>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    Contacts
-                    <div class="sub-menu">
-                        <a href="#">Email Us</a>
-                        <a href="#">Phone</a>
-                        <a href="#">Visit Us</a>
-                    </div>
-                </div>
-            </div>
-            <div class="social-links">
-                <a href="https://web.facebook.com/itclasssrilanka" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://computerclassinsrilanka.wordpress.com" target="_blank" aria-label="Wordpress"><i class="fab fa-wordpress"></i></a>
-                <a href="https://www.youtube.com/channel/UCJojbxGV0sfU1QPWhRxx4-A" target="_blank" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
-            </div>
-        </div>
-    </nav>
+    <nav class="top-menu"></nav>
+    <script src="navbar.js"></script>
 
     <div class="container">
         <!-- <h1>Student Learning Hub</h1> -->
-        
+
         <div class="instructions">
             <h3>Grade 6 English Medium</h3>
         </div>
@@ -256,30 +212,45 @@
                     <div class="category-title">Videos</div>
                     <div class="category-content">
                         <ul>
-                            <li><a href="https://youtu.be/ZvLlNWvvqvI" target="_blank">🏞️ 1 Wonders of the Living World</a></li>
-                            <li><a href="https://youtu.be/Z0QifZGRQNM" target="_blank">🌱 1.1 Characteristics of Organisms</a></li>
-                            <li><a href="https://youtu.be/1z3WVu7F3M4" target="_blank">🌳 1.2 Differences between Plants and Animals</a></li>
+                            <li><a href="https://youtu.be/ZvLlNWvvqvI" target="_blank">🏞️ 1 Wonders of the Living
+                                    World</a></li>
+                            <li><a href="https://youtu.be/Z0QifZGRQNM" target="_blank">🌱 1.1 Characteristics of
+                                    Organisms</a></li>
+                            <li><a href="https://youtu.be/1z3WVu7F3M4" target="_blank">🌳 1.2 Differences between Plants
+                                    and Animals</a></li>
                             <li><a href="https://youtu.be/6rNtSjY3nm0" target="_blank">🎯 Unit 1 Activity</a></li>
                             <li><a href="https://youtu.be/U2WIrbUycpQ" target="_blank">📄 Term 1 Model Paper</a></li>
-                        </ul>                        
+                        </ul>
                     </div>
                 </div>
                 <div class="category">
                     <div class="category-title">Questions</div>
                     <div class="category-content">
                         <ul>
-                            <li><a href="https://www.linkedin.com/pulse/grade-6-science-answer-key-multiple-choice-questions-amithafz-btzoc/" target="_blank">📄 Provincial Department of Education</a></li>
-                            <li><a href="https://www.linkedin.com/pulse/grade-6-science-unit-1-assessment-living-organisms-amithafz-pq1jc" target="_blank">🏞️ 1 Wonders of the Living World</a></li>
-                            <li><a href="https://www.linkedin.com/pulse/grade-6-science-unit-2-assessment-filling-blanks-amithafz-xgavc" target="_blank">🏞️ Unit 2 Assessment </a></li>
-                            <li><a href="https://www.linkedin.com/pulse/unit-evaluation-science-grade-6-3-part-i-true-false-amithafz-0hopc" target="_blank">🏞️ Unit 3 Evaluation: Science</a></li>
-                            <li><a href="https://www.linkedin.com/pulse/grade-6-science-project-unit-4-energy-our-life-amithafz-fktfc/" target="_blank">🏞️ Unit 4 - Energy in Our Day-to-Day Life.</a></li>
-                            <li><a href="https://www.linkedin.com/pulse/garde-6-unit-evaluation-science-5-along-answers-where-amithafz-fpibc" target="_blank">🏞️ Unit 5</a></li>
-                            <li><a href="https://www.linkedin.com/pulse/grade-6-science-unit-evaluation-along-answers-correct-amithafz-kqktc/" target="_blank">🏞️ Unit 6</a></li>
-                            <li><a href="https://www.linkedin.com/pulse/science-grade-6-unit-7-questions-answers-explanations-amithafz-uj1dc/" target="_blank">🏞️ Unit 7 Magnets </a></li>
-                            <li><a href="https://www.linkedin.com/pulse/grade-6-science-unit-8-types-energy-questions-answer-amithafz-znmic" target="_blank">🏞️ Unit 8 Electricity </a></li>
-                            <li><a href="https://www.linkedin.com/pulse/mcq-multiple-choice-questions-grade-6-science-unit-9-amithafz-wqrxc" target="_blank">🏞️ Unit 9 Energy </a></li>
-                            <li><a href="https://www.linkedin.com/pulse/grade-6-science-unit-10-reinforce-your-understanding-amithafz-fa1jc/" target="_blank">🏞️ Unit 10 </a></li>
-                            <li><a href="https://www.linkedin.com/pulse/science-grade-6-unit-11-weather-climate-amithafz-bypoc/" target="_blank">🏞️ Unit 11 </a></li>
+                            <li><a href="https://www.linkedin.com/pulse/grade-6-science-answer-key-multiple-choice-questions-amithafz-btzoc/"
+                                    target="_blank">📄 Provincial Department of Education</a></li>
+                            <li><a href="https://www.linkedin.com/pulse/grade-6-science-unit-1-assessment-living-organisms-amithafz-pq1jc"
+                                    target="_blank">🏞️ 1 Wonders of the Living World</a></li>
+                            <li><a href="https://www.linkedin.com/pulse/grade-6-science-unit-2-assessment-filling-blanks-amithafz-xgavc"
+                                    target="_blank">🏞️ Unit 2 Assessment </a></li>
+                            <li><a href="https://www.linkedin.com/pulse/unit-evaluation-science-grade-6-3-part-i-true-false-amithafz-0hopc"
+                                    target="_blank">🏞️ Unit 3 Evaluation: Science</a></li>
+                            <li><a href="https://www.linkedin.com/pulse/grade-6-science-project-unit-4-energy-our-life-amithafz-fktfc/"
+                                    target="_blank">🏞️ Unit 4 - Energy in Our Day-to-Day Life.</a></li>
+                            <li><a href="https://www.linkedin.com/pulse/garde-6-unit-evaluation-science-5-along-answers-where-amithafz-fpibc"
+                                    target="_blank">🏞️ Unit 5</a></li>
+                            <li><a href="https://www.linkedin.com/pulse/grade-6-science-unit-evaluation-along-answers-correct-amithafz-kqktc/"
+                                    target="_blank">🏞️ Unit 6</a></li>
+                            <li><a href="https://www.linkedin.com/pulse/science-grade-6-unit-7-questions-answers-explanations-amithafz-uj1dc/"
+                                    target="_blank">🏞️ Unit 7 Magnets </a></li>
+                            <li><a href="https://www.linkedin.com/pulse/grade-6-science-unit-8-types-energy-questions-answer-amithafz-znmic"
+                                    target="_blank">🏞️ Unit 8 Electricity </a></li>
+                            <li><a href="https://www.linkedin.com/pulse/mcq-multiple-choice-questions-grade-6-science-unit-9-amithafz-wqrxc"
+                                    target="_blank">🏞️ Unit 9 Energy </a></li>
+                            <li><a href="https://www.linkedin.com/pulse/grade-6-science-unit-10-reinforce-your-understanding-amithafz-fa1jc/"
+                                    target="_blank">🏞️ Unit 10 </a></li>
+                            <li><a href="https://www.linkedin.com/pulse/science-grade-6-unit-11-weather-climate-amithafz-bypoc/"
+                                    target="_blank">🏞️ Unit 11 </a></li>
                         </ul>
                     </div>
                 </div>
@@ -303,10 +274,14 @@
                     <div class="category-title">Videos</div>
                     <div class="category-content">
                         <ul>
-                            <li><a href="https://youtu.be/isLNkfJgGD8" target="_blank">1 The School and its Immediate Surroundings</a></li>
-                            <li><a href="https://youtu.be/bTmccSLjaiU" target="_blank">1.1 Identifying the Location of a School</a></li>
-                            <li><a href="https://youtu.be/mY_echy9x6w" target="_blank">1.2 Weather Conditions of the Immediate Surroundings of the School</a></li>
-                            <li><a href="https://youtube.com/shorts/xF7MibfugqI?feature=share" target="_blank">1.3 Landscape of the Immediate Surroundings of the School</a></li>
+                            <li><a href="https://youtu.be/isLNkfJgGD8" target="_blank">1 The School and its Immediate
+                                    Surroundings</a></li>
+                            <li><a href="https://youtu.be/bTmccSLjaiU" target="_blank">1.1 Identifying the Location of a
+                                    School</a></li>
+                            <li><a href="https://youtu.be/mY_echy9x6w" target="_blank">1.2 Weather Conditions of the
+                                    Immediate Surroundings of the School</a></li>
+                            <li><a href="https://youtube.com/shorts/xF7MibfugqI?feature=share" target="_blank">1.3
+                                    Landscape of the Immediate Surroundings of the School</a></li>
                         </ul>
                     </div>
                 </div>
@@ -314,11 +289,16 @@
                     <div class="category-title">Questions</div>
                     <div class="category-content">
                         <ul>
-                            <li><a href="https://www.linkedin.com/pulse/geography-grade-6-questions-answer-choices-term-iii-amithafz-dwvge" target="_blank">Term III</a></li>
-                            <li><a href="https://www.linkedin.com/pulse/grade-6-geography-unit-3-test-good-maintenance-your-amithafz-d4pjc/" target="_blank">GOOD MAINTENANCE OF THE IMMEDIATE SURROUNDING OF YOUR HOME</a></li>
-                            <li><a href="https://www.linkedin.com/pulse/grade-6-geography-unit-test-human-activities-school-amithafz-q8zrc/" target="_blank">Human Activities in the Immediate Surrounding of The School</a></li>
-                            <li><a href="https://www.linkedin.com/pulse/geography-grade-6-unit-school-immediate-surrounding-amithafz-d43vc" target="_blank">The school and the immediate surrounding of the school</a></li>
-                            <li><a href="https://www.linkedin.com/pulse/geographical-location-sri-lanka-grade-06-geography-4-amithafz-tb1dc/" target="_blank">4.0 Geographical Location of Sri Lanka</a></li>
+                            <li><a href="https://www.linkedin.com/pulse/geography-grade-6-questions-answer-choices-term-iii-amithafz-dwvge"
+                                    target="_blank">Term III</a></li>
+                            <li><a href="https://www.linkedin.com/pulse/grade-6-geography-unit-3-test-good-maintenance-your-amithafz-d4pjc/"
+                                    target="_blank">GOOD MAINTENANCE OF THE IMMEDIATE SURROUNDING OF YOUR HOME</a></li>
+                            <li><a href="https://www.linkedin.com/pulse/grade-6-geography-unit-test-human-activities-school-amithafz-q8zrc/"
+                                    target="_blank">Human Activities in the Immediate Surrounding of The School</a></li>
+                            <li><a href="https://www.linkedin.com/pulse/geography-grade-6-unit-school-immediate-surrounding-amithafz-d43vc"
+                                    target="_blank">The school and the immediate surrounding of the school</a></li>
+                            <li><a href="https://www.linkedin.com/pulse/geographical-location-sri-lanka-grade-06-geography-4-amithafz-tb1dc/"
+                                    target="_blank">4.0 Geographical Location of Sri Lanka</a></li>
                         </ul>
                     </div>
                 </div>
@@ -326,7 +306,9 @@
                     <div class="category-title">Practice Questions</div>
                     <div class="category-content">
                         <ul>
-                            <li><a href="https://www.linkedin.com/pulse/geography-term-3-grade-6-model-papers-answer-amithafz-tqu2c/">Term 3</a></li>
+                            <li><a
+                                    href="https://www.linkedin.com/pulse/geography-term-3-grade-6-model-papers-answer-amithafz-tqu2c/">Term
+                                    3</a></li>
                         </ul>
                     </div>
                 </div>
@@ -341,21 +323,33 @@
                     <div class="category-title">Videos</div>
                     <div class="category-content">
                         <ul>
-                            <li><a href="https://youtube.com/shorts/Hc13EPDQxJg?feature=share" target="_blank">1 Defining  History</a></li>
+                            <li><a href="https://youtube.com/shorts/Hc13EPDQxJg?feature=share" target="_blank">1
+                                    Defining History</a></li>
                             <li><a href="https://youtu.be/PRWDoz5TMwA" target="_blank">1.1 What Is History?</a></li>
                             <li><a href="https://youtu.be/IoxqiXU4Oic" target="_blank">1.2 How to Study History</a></li>
-                            <li><a href="https://youtube.com/shorts/sTdbEBT_Xhg?feature=share" target="_blank">1.3 Benefits of Learning History </a></li>
-                            <li><a href="https://youtu.be/YUq6a9raxs4" target="_blank">1.4 How Does History Measure Time?  </a></li>
+                            <li><a href="https://youtube.com/shorts/sTdbEBT_Xhg?feature=share" target="_blank">1.3
+                                    Benefits of Learning History </a></li>
+                            <li><a href="https://youtu.be/YUq6a9raxs4" target="_blank">1.4 How Does History Measure
+                                    Time? </a></li>
                             <li><a href="https://youtu.be/YUq6a9raxs4" target="_blank">2 Ancient Man</a></li>
-                            <li><a href="https://youtu.be/kk4iv94Kol4" target="_blank">2.1 The Environment Where Man's Origin Took Place</a></li>
-                            <li><a href="https://youtu.be/MwAAzRWs_EQ" target="_blank">2.2 The Evolution of Ancient Man</a></li>
-                            <li><a href="https://youtu.be/gs2UiREFNdc" target="_blank">2.3 The Cultural Evolution of Man</a></li>
-                            <li><a href="https://youtu.be/kme1lqRHemU" target="_blank">2.3 The Agriculture Civilization of Man</a></li>                           
-                            <li><a href="https://youtu.be/fK5U4YVeNjo" target="_blank">3.0 Ancient Civilizations in the World</a></li>
-                            <li><a href="https://youtu.be/fDOzJppjYF4" target="_blank">3.1 Mesopotamian Civilization</a></li>
-                            <li><a href="https://youtu.be/2ewYTkUPY4w" target="_blank">3.2 Indus River Valley Civilization</a></li>
-                            <li><a href="https://youtu.be/T2UahSd-3AQ" target="_blank">3.3 Egyptian (Nile River Valley) Civilization</a></li>
-                            <li><a href="https://youtu.be/oUBe69PeBVc" target="_blank">4.0 History Our Brave Kings</a></li>
+                            <li><a href="https://youtu.be/kk4iv94Kol4" target="_blank">2.1 The Environment Where Man's
+                                    Origin Took Place</a></li>
+                            <li><a href="https://youtu.be/MwAAzRWs_EQ" target="_blank">2.2 The Evolution of Ancient
+                                    Man</a></li>
+                            <li><a href="https://youtu.be/gs2UiREFNdc" target="_blank">2.3 The Cultural Evolution of
+                                    Man</a></li>
+                            <li><a href="https://youtu.be/kme1lqRHemU" target="_blank">2.3 The Agriculture Civilization
+                                    of Man</a></li>
+                            <li><a href="https://youtu.be/fK5U4YVeNjo" target="_blank">3.0 Ancient Civilizations in the
+                                    World</a></li>
+                            <li><a href="https://youtu.be/fDOzJppjYF4" target="_blank">3.1 Mesopotamian Civilization</a>
+                            </li>
+                            <li><a href="https://youtu.be/2ewYTkUPY4w" target="_blank">3.2 Indus River Valley
+                                    Civilization</a></li>
+                            <li><a href="https://youtu.be/T2UahSd-3AQ" target="_blank">3.3 Egyptian (Nile River Valley)
+                                    Civilization</a></li>
+                            <li><a href="https://youtu.be/oUBe69PeBVc" target="_blank">4.0 History Our Brave Kings</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -363,13 +357,23 @@
                     <div class="category-title">Notes</div>
                     <div class="category-content">
                         <ul>
-                            <li><a href="https://www.linkedin.com/pulse/ancient-civilizations-world-grade-6-history-chapter-3-amithafz-1lqbc">3.0 Ancient Civilizations in the World</a></li>
-                            <li><a href="https://www.linkedin.com/pulse/mesopotamian-civilization-grade-6-history-developed-amithafz-zsl5c" target="_blank">3.1 Mesopotamian Civilization</a></li>
-                            <li><a href="https://www.linkedin.com/pulse/indus-river-valley-civilization-points-explanations-6-amithafz-wi9qc">3.2 Indus River Valley Civilization</a></li>
-                            <li><a href="https://www.linkedin.com/pulse/egyptian-nile-river-valley-civilization-garde-6-guide-amithafz-9pyzc/">3.3 Egyptian (Nile River Valley) Civilization</a></li>
-                            <li><a href="https://www.linkedin.com/pulse/king-pandukabhaya-devanampiyatissa-grade-6-history-amithafz-x0ric/" target="_blank">4.0 History Our Brave Kings</a></li>
-                            <li><a href="https://www.linkedin.com/pulse/king-devanampiyatissa-dutugemunu-elara-grade-6-our-amithafz-dwzdc/" target="_blank">4.1 History Our Brave Kings</a></li>
-                            <li><a href="https://www.linkedin.com/pulse/king-dutugemunu-valagamba-mahasen-dhathusena-grade-6-amithafz-ntooc/" target="_blank">4.2 History Our Brave Kings</a></li>
+                            <li><a
+                                    href="https://www.linkedin.com/pulse/ancient-civilizations-world-grade-6-history-chapter-3-amithafz-1lqbc">3.0
+                                    Ancient Civilizations in the World</a></li>
+                            <li><a href="https://www.linkedin.com/pulse/mesopotamian-civilization-grade-6-history-developed-amithafz-zsl5c"
+                                    target="_blank">3.1 Mesopotamian Civilization</a></li>
+                            <li><a
+                                    href="https://www.linkedin.com/pulse/indus-river-valley-civilization-points-explanations-6-amithafz-wi9qc">3.2
+                                    Indus River Valley Civilization</a></li>
+                            <li><a
+                                    href="https://www.linkedin.com/pulse/egyptian-nile-river-valley-civilization-garde-6-guide-amithafz-9pyzc/">3.3
+                                    Egyptian (Nile River Valley) Civilization</a></li>
+                            <li><a href="https://www.linkedin.com/pulse/king-pandukabhaya-devanampiyatissa-grade-6-history-amithafz-x0ric/"
+                                    target="_blank">4.0 History Our Brave Kings</a></li>
+                            <li><a href="https://www.linkedin.com/pulse/king-devanampiyatissa-dutugemunu-elara-grade-6-our-amithafz-dwzdc/"
+                                    target="_blank">4.1 History Our Brave Kings</a></li>
+                            <li><a href="https://www.linkedin.com/pulse/king-dutugemunu-valagamba-mahasen-dhathusena-grade-6-amithafz-ntooc/"
+                                    target="_blank">4.2 History Our Brave Kings</a></li>
                         </ul>
                     </div>
                 </div>
@@ -377,13 +381,27 @@
                     <div class="category-title">Practice Questions</div>
                     <div class="category-content">
                         <ul>
-                            <li><a href="https://www.linkedin.com/pulse/grade-6-civics-holiday-assignment-each-question-can-amithafz-femec"> Assignment  </a></li>
-                            <li><a href="https://www.linkedin.com/pulse/grade-06-civic-education-provincial-department-third-amithafz-acslc"> Term III  </a></li>
-                            <li><a href="https://www.linkedin.com/pulse/grade-6-history-exam-questions-answers-explanations-amithafz-78whc"> Term III  </a></li>
-                            <li><a href="https://www.linkedin.com/pulse/grade-06-history-textbook-english-medium-new-syllabus-amithafz-ujxpc/"> Q & A Part 1  </a></li>
-                            <li><a href="https://www.linkedin.com/pulse/grade-06-history-textbook-english-medium-new-syllabus-amithafz-ckisc/"> Q & A Part 2  </a></li>
-                            <li><a href="https://www.linkedin.com/pulse/grade-06-history-textbook-english-medium-new-syllabu-amithafz-y8dec/"> Q & A Part 3  </a></li>
-                            <li><a href="https://www.linkedin.com/pulse/history-grade-6-english-medium-pdf-download-amithafz-dmgqc/"> Term 2  </a></li>
+                            <li><a
+                                    href="https://www.linkedin.com/pulse/grade-6-civics-holiday-assignment-each-question-can-amithafz-femec">
+                                    Assignment </a></li>
+                            <li><a
+                                    href="https://www.linkedin.com/pulse/grade-06-civic-education-provincial-department-third-amithafz-acslc">
+                                    Term III </a></li>
+                            <li><a
+                                    href="https://www.linkedin.com/pulse/grade-6-history-exam-questions-answers-explanations-amithafz-78whc">
+                                    Term III </a></li>
+                            <li><a
+                                    href="https://www.linkedin.com/pulse/grade-06-history-textbook-english-medium-new-syllabus-amithafz-ujxpc/">
+                                    Q & A Part 1 </a></li>
+                            <li><a
+                                    href="https://www.linkedin.com/pulse/grade-06-history-textbook-english-medium-new-syllabus-amithafz-ckisc/">
+                                    Q & A Part 2 </a></li>
+                            <li><a
+                                    href="https://www.linkedin.com/pulse/grade-06-history-textbook-english-medium-new-syllabu-amithafz-y8dec/">
+                                    Q & A Part 3 </a></li>
+                            <li><a
+                                    href="https://www.linkedin.com/pulse/history-grade-6-english-medium-pdf-download-amithafz-dmgqc/">
+                                    Term 2 </a></li>
                         </ul>
                     </div>
                 </div>
@@ -398,20 +416,32 @@
                     <div class="category-title">Videos</div>
                     <div class="category-content">
                         <ul>
-                            <li><a href="https://youtu.be/kzOUIwbYIbI" target="_blank">1.1 History of our School</a></li>
-                            <li><a href="https://youtu.be/j9gNrhAf5PA" target="_blank">1.2 Let us inquire on the organizational structure of the school</a></li>
-                            <li><a href="https://youtu.be/sNPmxOqT-7w" target="_blank">1.3. I myself enquire information regarding me</a></li>
-                            <li><a href="https://youtu.be/UPikDfbHkT0" target="_blank">1.4 Let us work to a plan</a></li>
+                            <li><a href="https://youtu.be/kzOUIwbYIbI" target="_blank">1.1 History of our School</a>
+                            </li>
+                            <li><a href="https://youtu.be/j9gNrhAf5PA" target="_blank">1.2 Let us inquire on the
+                                    organizational structure of the school</a></li>
+                            <li><a href="https://youtu.be/sNPmxOqT-7w" target="_blank">1.3. I myself enquire information
+                                    regarding me</a></li>
+                            <li><a href="https://youtu.be/UPikDfbHkT0" target="_blank">1.4 Let us work to a plan</a>
+                            </li>
                             <li><a href="https://youtu.be/6J_jK0b4O8g" target="_blank">1.5 School Culture</a></li>
-                            <li><a href="https://youtube.com/shorts/Hc13EPDQxJg?feature=share" target="_blank">1.6 Vision of our school</a></li>
-                            <li><a href="https://youtu.be/nkkdTPeaFCY" target="_blank">1.7 Implementing duties between teachers and students</a></li>
-                            <li><a href="https://youtube.com/shorts/sTdbEBT_Xhg?feature=share" target="_blank">1.8. The bond between the school and society</a></li>
-                            <li><a href="https://youtu.be/NDEhVA3aDCs" target="_blank">2.1 The Region We Live in Sri Lanka</a></li>
-                            <li><a href="https://youtu.be/I82nivHVOXY" target="_blank">2.1 Grama Niladhari's Division</a></li>
-                            <li><a href="https://youtu.be/HOp0fZpwAR0" target="_blank">2.1 How the value of the human resources can be increased</a></li>
-                            <li><a href="https://youtu.be/SHsMKg4aoto" target="_blank">2.2 Living co–operatively with the people of the area</a></li>
+                            <li><a href="https://youtube.com/shorts/Hc13EPDQxJg?feature=share" target="_blank">1.6
+                                    Vision of our school</a></li>
+                            <li><a href="https://youtu.be/nkkdTPeaFCY" target="_blank">1.7 Implementing duties between
+                                    teachers and students</a></li>
+                            <li><a href="https://youtube.com/shorts/sTdbEBT_Xhg?feature=share" target="_blank">1.8. The
+                                    bond between the school and society</a></li>
+                            <li><a href="https://youtu.be/NDEhVA3aDCs" target="_blank">2.1 The Region We Live in Sri
+                                    Lanka</a></li>
+                            <li><a href="https://youtu.be/I82nivHVOXY" target="_blank">2.1 Grama Niladhari's
+                                    Division</a></li>
+                            <li><a href="https://youtu.be/HOp0fZpwAR0" target="_blank">2.1 How the value of the human
+                                    resources can be increased</a></li>
+                            <li><a href="https://youtu.be/SHsMKg4aoto" target="_blank">2.2 Living co–operatively with
+                                    the people of the area</a></li>
                             <li><a href="https://youtu.be/BnEJ7587Yyc" target="_blank">2.3 Those who help us </a></li>
-                            <li><a href="https://youtu.be/QLz1EkOxiAc" target="_blank">2.4 Duties of the institutions  that provide us with services</a></li>
+                            <li><a href="https://youtu.be/QLz1EkOxiAc" target="_blank">2.4 Duties of the institutions
+                                    that provide us with services</a></li>
                         </ul>
                     </div>
                 </div>
@@ -419,9 +449,12 @@
                     <div class="category-title">Notes</div>
                     <div class="category-content">
                         <ul>
-                            <li><a href="https://www.linkedin.com/pulse/civics-grade-6-term-3-exam-paper-quetions-answers-amithafz-u5sge" target="_blank">Term III - Q&A Test 1</a></li>
-                            <li><a href="https://www.linkedin.com/pulse/good-citizen-civic-education-grade-6-unit-31-polite-amithafz-jduyc/" target="_blank">3.1. Practicing polite language</a></li>
-                            <li><a href="https://www.linkedin.com/pulse/32-let-us-come-conclusions-through-respecting-views-6-amithafz-re6bc/" target="_blank">3.2. Let us come to conclusions through respecting ..</a></li>
+                            <li><a href="https://www.linkedin.com/pulse/civics-grade-6-term-3-exam-paper-quetions-answers-amithafz-u5sge"
+                                    target="_blank">Term III - Q&A Test 1</a></li>
+                            <li><a href="https://www.linkedin.com/pulse/good-citizen-civic-education-grade-6-unit-31-polite-amithafz-jduyc/"
+                                    target="_blank">3.1. Practicing polite language</a></li>
+                            <li><a href="https://www.linkedin.com/pulse/32-let-us-come-conclusions-through-respecting-views-6-amithafz-re6bc/"
+                                    target="_blank">3.2. Let us come to conclusions through respecting ..</a></li>
                         </ul>
                     </div>
                 </div>
@@ -429,7 +462,8 @@
                     <div class="category-title">Practice Questions</div>
                     <div class="category-content">
                         <ul>
-                            <li><a href="https://www.linkedin.com/pulse/civics-grade-6-term-3-exam-paper-quetions-answers-amithafz-u5sge" target="_blank">Term III - Q&A Test 1</a></li>
+                            <li><a href="https://www.linkedin.com/pulse/civics-grade-6-term-3-exam-paper-quetions-answers-amithafz-u5sge"
+                                    target="_blank">Term III - Q&A Test 1</a></li>
                         </ul>
                     </div>
                 </div>
@@ -444,19 +478,31 @@
                     <div class="category-title">Videos</div>
                     <div class="category-content">
                         <ul>
-                            <li><a href="https://youtu.be/cJSJYyqvZbc" target="_blank">🏝️ 1.1 Physical well-being</a></li>
-                            <li><a href="https://youtu.be/nbWHu3NCGx0" target="_blank">🏝️ 1.2 Mental well-being</a></li>
-                            <li><a href="https://youtu.be/PmyLLC2fJ1Q" target="_blank">🏝️ 1.3 Social well-being</a></li>
-                            <li><a href="https://youtu.be/ce5eU21xmp0" target="_blank">🏝️ 1.4 Spiritual well-being</a></li>
+                            <li><a href="https://youtu.be/cJSJYyqvZbc" target="_blank">🏝️ 1.1 Physical well-being</a>
+                            </li>
+                            <li><a href="https://youtu.be/nbWHu3NCGx0" target="_blank">🏝️ 1.2 Mental well-being</a>
+                            </li>
+                            <li><a href="https://youtu.be/PmyLLC2fJ1Q" target="_blank">🏝️ 1.3 Social well-being</a>
+                            </li>
+                            <li><a href="https://youtu.be/ce5eU21xmp0" target="_blank">🏝️ 1.4 Spiritual well-being</a>
+                            </li>
                             <li><a href="https://youtu.be/nqhZ0RKfCjM" target="_blank">🏝️ 2.0 Basic Needs</a></li>
-                            <li><a href="https://youtu.be/m5JODdt9gSw" target="_blank">🏝️ 3.0 Let us improve personality through posture</a></li>
-                            <li><a href="https://youtu.be/V8yuvT0fAm0" target="_blank">🏝️ 4.0 Let us enjoy our leisure through recreational games</a></li>
-                            <li><a href="https://youtu.be/I9flVb2_WoM" target="_blank">🏝️ 5.0 Let us develop basic athletic skills</a></li>
-                            <li><a href="https://youtu.be/dBiUyTn8zM4" target="_blank">🏝️ 6.0 Let us respect rules, regulations and ethics in sports </a></li>
-                            <li><a href="https://youtu.be/2rNRF1nR_AY" target="_blank">🏝️ 7.0 Let us get used to healthy food habits</a></li>
-                            <li><a href="https://youtu.be/OnWPTs5nnM0" target="_blank">🏝️ 8.0 Let us maintain a healthy body</a></li>
-                            <li><a href="https://youtu.be/ZsCXUbM0eNs" target="_blank">🏝️ 9.0 Let us improve fitness for a balanced life</a></li>
-                            <li><a href="https://youtu.be/VoTHMYI9eIU" target="_blank">🏝️ 10.0 Let us be aware and face challenges</a></li>
+                            <li><a href="https://youtu.be/m5JODdt9gSw" target="_blank">🏝️ 3.0 Let us improve
+                                    personality through posture</a></li>
+                            <li><a href="https://youtu.be/V8yuvT0fAm0" target="_blank">🏝️ 4.0 Let us enjoy our leisure
+                                    through recreational games</a></li>
+                            <li><a href="https://youtu.be/I9flVb2_WoM" target="_blank">🏝️ 5.0 Let us develop basic
+                                    athletic skills</a></li>
+                            <li><a href="https://youtu.be/dBiUyTn8zM4" target="_blank">🏝️ 6.0 Let us respect rules,
+                                    regulations and ethics in sports </a></li>
+                            <li><a href="https://youtu.be/2rNRF1nR_AY" target="_blank">🏝️ 7.0 Let us get used to
+                                    healthy food habits</a></li>
+                            <li><a href="https://youtu.be/OnWPTs5nnM0" target="_blank">🏝️ 8.0 Let us maintain a healthy
+                                    body</a></li>
+                            <li><a href="https://youtu.be/ZsCXUbM0eNs" target="_blank">🏝️ 9.0 Let us improve fitness
+                                    for a balanced life</a></li>
+                            <li><a href="https://youtu.be/VoTHMYI9eIU" target="_blank">🏝️ 10.0 Let us be aware and face
+                                    challenges</a></li>
                         </ul>
                     </div>
                 </div>
@@ -465,12 +511,19 @@
                     <div class="category-content">
                         <ul>
                             <li><a href="#">Health Topics</a></li>
-                            <li><a href="https://www.linkedin.com/posts/amithafz-educator-content-writer-social-media-marketer-74494a123_here-are-the-key-points-extracted-from-the-activity-7240562494040129536-ydsr?utm_source=share&utm_medium=member_desktop" target="_blank">🏝️ 4.0 Let us enjoy our leisure through recreational games</a></li>
-                            <li><a href="https://www.linkedin.com/pulse/what-known-rules-regulations-sports-grade-6-unit-amithafz-jx9xc/" target="_blank">🏝️ 6.0 Let us respect rules, regulations and ethics in sports </a></li>
-                            <li><a href="https://www.linkedin.com/pulse/what-happens-when-you-start-eating-healthy-let-us-get-amithafz-llf6c" target="_blank">🏝️ 7.0 Let us get used to healthy food habits </a></li>
-                            <li><a href="https://www.linkedin.com/pulse/grade-6-lesson-8-health-let-us-maintain-healthy-body-amithafz-3gjdc" target="_blank">🏝️ 8.0 Let us maintain a healthy body</a></li>
-                            <li><a href="https://www.linkedin.com/pulse/grade-06-health-lesson-09-let-us-improve-fitness-amithafz-jrj2c/" target="_blank">🏝️ 9.0 Let us improve fitness for a balanced life</a></li>
-                            <li><a href="https://www.linkedin.com/pulse/grade-6-health-physical-education-let-us-aware-face-amithafz-vsuyc" target="_blank">🏝️ 10.0 Let us be aware and face challenges</a></li>
+                            <li><a href="https://www.linkedin.com/posts/amithafz-educator-content-writer-social-media-marketer-74494a123_here-are-the-key-points-extracted-from-the-activity-7240562494040129536-ydsr?utm_source=share&utm_medium=member_desktop"
+                                    target="_blank">🏝️ 4.0 Let us enjoy our leisure through recreational games</a></li>
+                            <li><a href="https://www.linkedin.com/pulse/what-known-rules-regulations-sports-grade-6-unit-amithafz-jx9xc/"
+                                    target="_blank">🏝️ 6.0 Let us respect rules, regulations and ethics in sports </a>
+                            </li>
+                            <li><a href="https://www.linkedin.com/pulse/what-happens-when-you-start-eating-healthy-let-us-get-amithafz-llf6c"
+                                    target="_blank">🏝️ 7.0 Let us get used to healthy food habits </a></li>
+                            <li><a href="https://www.linkedin.com/pulse/grade-6-lesson-8-health-let-us-maintain-healthy-body-amithafz-3gjdc"
+                                    target="_blank">🏝️ 8.0 Let us maintain a healthy body</a></li>
+                            <li><a href="https://www.linkedin.com/pulse/grade-06-health-lesson-09-let-us-improve-fitness-amithafz-jrj2c/"
+                                    target="_blank">🏝️ 9.0 Let us improve fitness for a balanced life</a></li>
+                            <li><a href="https://www.linkedin.com/pulse/grade-6-health-physical-education-let-us-aware-face-amithafz-vsuyc"
+                                    target="_blank">🏝️ 10.0 Let us be aware and face challenges</a></li>
                         </ul>
                     </div>
                 </div>
@@ -478,17 +531,28 @@
                     <div class="category-title">Practice Questions</div>
                     <div class="category-content">
                         <ul>
-                            <li><a href="https://youtu.be/cJSJYyqvZbc" target="_blank">🏞️ 1.1 Physical well-being</a></li>
-                            <li><a href="https://youtu.be/nbWHu3NCGx0" target="_blank">🏞️ 1.2 Mental well-being</a></li>
-                            <li><a href="https://anki-decks.com/deck/detail/ea8AT0AMs/" target="_blank">🏞️ 1.3 Social well-being</a></li>
-                            <li><a href="https://anki-decks.com/deck/detail/GnhAXjdMg/" target="_blank">🏞️ 1.4 Spiritual well-being</a></li>
-                            <li><a href="https://anki-decks.com/deck/detail/dZrHFOJQN/" target="_blank">🏞️ 2.0 Basic Needs</a></li>
-                            <li><a href="https://anki-decks.com/deck/detail/wN5obGHmn/" target="_blank">🏞️ 3.0 Let us improve personality through posture</a></li>
-                            <li><a href="https://www.linkedin.com/pulse/grade-6-health-physical-education-nwp-underline-amithafz-eqvgc" target="_blank">🏞️ NWP Exam</a></li>                            
-                            <li><a href="https://www.linkedin.com/pulse/term-iii-examination-grade-6-health-physical-amithafz-ivhtc" target="_blank">🏞️ Term III </a></li>
-                            <li><a href="https://www.linkedin.com/pulse/grade-6-health-physical-education-text-book-question-amithafz-ao4kc" target="_blank">🏞️ Part 1 </a></li>
-                            <li><a href="https://www.linkedin.com/pulse/grade-6-health-physical-education-text-book-question-amithafz-dpq9c/" target="_blank">🏞️ Part 2 </a></li>
-                            <li><a href="https://www.linkedin.com/pulse/grade-6-health-physical-education-text-book-question-amithafz-nzyyc/" target="_blank">🏞️ Part 3 </a></li>
+                            <li><a href="https://youtu.be/cJSJYyqvZbc" target="_blank">🏞️ 1.1 Physical well-being</a>
+                            </li>
+                            <li><a href="https://youtu.be/nbWHu3NCGx0" target="_blank">🏞️ 1.2 Mental well-being</a>
+                            </li>
+                            <li><a href="https://anki-decks.com/deck/detail/ea8AT0AMs/" target="_blank">🏞️ 1.3 Social
+                                    well-being</a></li>
+                            <li><a href="https://anki-decks.com/deck/detail/GnhAXjdMg/" target="_blank">🏞️ 1.4
+                                    Spiritual well-being</a></li>
+                            <li><a href="https://anki-decks.com/deck/detail/dZrHFOJQN/" target="_blank">🏞️ 2.0 Basic
+                                    Needs</a></li>
+                            <li><a href="https://anki-decks.com/deck/detail/wN5obGHmn/" target="_blank">🏞️ 3.0 Let us
+                                    improve personality through posture</a></li>
+                            <li><a href="https://www.linkedin.com/pulse/grade-6-health-physical-education-nwp-underline-amithafz-eqvgc"
+                                    target="_blank">🏞️ NWP Exam</a></li>
+                            <li><a href="https://www.linkedin.com/pulse/term-iii-examination-grade-6-health-physical-amithafz-ivhtc"
+                                    target="_blank">🏞️ Term III </a></li>
+                            <li><a href="https://www.linkedin.com/pulse/grade-6-health-physical-education-text-book-question-amithafz-ao4kc"
+                                    target="_blank">🏞️ Part 1 </a></li>
+                            <li><a href="https://www.linkedin.com/pulse/grade-6-health-physical-education-text-book-question-amithafz-dpq9c/"
+                                    target="_blank">🏞️ Part 2 </a></li>
+                            <li><a href="https://www.linkedin.com/pulse/grade-6-health-physical-education-text-book-question-amithafz-nzyyc/"
+                                    target="_blank">🏞️ Part 3 </a></li>
                         </ul>
                     </div>
                 </div>
@@ -504,10 +568,14 @@
                     <div class="category-title">Exercise</div>
                     <div class="category-content">
                         <ul>
-                            <li><a href="https://localedxcelcambridgeictcomputerclass.blogspot.com/2024/12/game-development-courses-sri-lanka.html" target="_blank">Max and Min</a></li>
-                            <li><a href="https://localedxcelcambridgeictcomputerclass.blogspot.com/2024/12/math-addition-practice-questions-grade.html" target="_blank">Addition</a></li>
-                            <li><a href="https://localedxcelcambridgeictcomputerclass.blogspot.com/2024/12/math-quiz-game-body-font-family-arial.html" target="_blank">Caculation</a></li>
-                            <li><a href="https://localedxcelcambridgeictcomputerclass.blogspot.com/2024/12/math-quiz-fill-in-blanks-grade-5.html" target="_blank">Fill</a></li>
+                            <li><a href="https://localedxcelcambridgeictcomputerclass.blogspot.com/2024/12/game-development-courses-sri-lanka.html"
+                                    target="_blank">Max and Min</a></li>
+                            <li><a href="https://localedxcelcambridgeictcomputerclass.blogspot.com/2024/12/math-addition-practice-questions-grade.html"
+                                    target="_blank">Addition</a></li>
+                            <li><a href="https://localedxcelcambridgeictcomputerclass.blogspot.com/2024/12/math-quiz-game-body-font-family-arial.html"
+                                    target="_blank">Caculation</a></li>
+                            <li><a href="https://localedxcelcambridgeictcomputerclass.blogspot.com/2024/12/math-quiz-fill-in-blanks-grade-5.html"
+                                    target="_blank">Fill</a></li>
                         </ul>
                     </div>
                 </div>
@@ -540,7 +608,9 @@
                     <div class="category-title">Model Paper</div>
                     <div class="category-content">
                         <ul>
-                            <li><a href="https://www.linkedin.com/pulse/english-literature-past-papers-grade-6-term-iii-model-amithafz-ysacc">Model 2023</a></li>
+                            <li><a
+                                    href="https://www.linkedin.com/pulse/english-literature-past-papers-grade-6-term-iii-model-amithafz-ysacc">Model
+                                    2023</a></li>
                             <li><a href="#">English Literature</a></li>
                         </ul>
                     </div>
@@ -639,28 +709,49 @@
                     <div class="category-title">Videos</div>
                     <div class="category-content">
                         <ul>
-                            <li><a href="https://youtu.be/PC43okH0EXc" target="_blank">Jabal Thawr Cultural District Umrah Tour Visit Tamil Bayan</a></li>
-                            <li><a href="https://youtu.be/48kM0jzlnNk" target="_blank">Umrah Bayan in Tamil Prophet Masjid Shythan Stoning Arafah Area Live Telecast ghar esoor makkah tour</a></li>
-                            <li><a href="https://youtu.be/wSI6vxLsQYU" target="_blank">Masjid al Namirah Arabic مسجد نمرة is a mosque in Wadi Uranah near Mecca in the Makkah Province of S</a></li>
-                            <li><a href="https://youtu.be/OmPpYpfgrUQ" target="_blank">Tamil Umrah Bayan steps king haroon rashid wife subidha series of wells, reservoirs and artificial</a></li>
-                            <li><a href="https://youtu.be/Ixs4xPWH6HU" target="_blank">Ibrahim A S place of sacrifice for Ismail A S , Makkah, Saudi Arabia</a></li>
-                            <li><a href="https://youtu.be/9I3XjWaEjtg" target="_blank">Jabal al Nour Arabic جَبَل ٱلنُّوْر, romanized Jabal an Nūr, lit  'Mountain of the Light' or 'Hill o</a></li>
-                            <li><a href="https://youtu.be/9tFv99ilJYI" target="_blank">Story of Prophet Muhammad & Lady Khadijah Tamil Bayan she Woman of Beauty, Strength & Faith marriage</a></li>
-                            <li><a href="https://youtu.be/idebR_MXdPA" target="_blank">Prophet muhammad life story birth, family, marriage, spiritual encounter, and mission in Mecca</a></li>
-                            <li><a href="https://youtu.be/Lghlf-QQb98" target="_blank">Backbite to say unpleasant and unkind things about someone who is not there backbite about colleague</a></li>
-                            <li><a href="https://youtu.be/wXPe19RJtoY" target="_blank">What Happens After Death? Life in the Grave – Islamic Insights angel of death</a></li>
-                            <li><a href="https://youtu.be/_0MJchKUHd4" target="_blank">Companions of the Prophet History, Sahabah, & Hadith Aqdas Ral</a></li>
-                            <li><a href="https://youtu.be/qoJBGlg5isQ" target="_blank">The Day of Arafah Arabic يوم عرفة, romanized Yawm 'Arafah is Islamic holiday bayan arabian peninsula</a></li>
-                            <li><a href="https://youtu.be/Z1I21ty3-qc" target="_blank">The Treaty of Hudaybiyyah was an event that took place during the lifetime of the Islamic prophet</a></li>
-                            <li><a href="https://youtu.be/ZoLjGp15yIs" target="_blank">Ikrima ibn Abī Jahl ʿAmr ibn Hishām was a leading opponent turned companion of the Islamic prophet</a></li>
-                            <li><a href="https://youtu.be/EYzGNHHfLNY" target="_blank">Mina Arabic مِنَى, Minā, also known as Muna Arabic مُنَى, Munā, City of Tents Hajj Umra Pilgrimage</a></li>
-                            <li><a href="https://youtu.be/2zX5eACHpk4" target="_blank">Taif is a city and governorate in the Makkah Region of Saudi Arabia Welcome to Taif Lying just east.</a></li>
-                            <li><a href="https://youtu.be/sBjEQj8aA8I" target="_blank">Taif in Saudi Arabia If so, it is a beautiful and cool city located in the Makkah region</a></li>
-                            <li><a href="https://youtu.be/8FNpp0ah_zE" target="_blank">The Complete History Of Thawr Cave Jabal Thawr is a mountain in Saudi Arabia</a></li>
-                            <li><a href="https://youtu.be/dGp7axEDMrU" target="_blank">Life history of prophet muhammad from birth to death muhammad ﷺ life story founder Islam Tamil Bayan</a></li>
-                            <li><a href="https://youtu.be/qj6W3QEgyJY" target="_blank">Camel mentioned in Qur’an Allah says in the Holy Qur’an Do they not look at the camel, how created</a></li>
-                            <li><a href="https://youtu.be/btJBPGnuk9g" target="_blank">Great Mosque of Mecca, Arabic al Masjid al Ḥarām, also called Holy Mosque or Haram Mosque, mosque in</a></li>
-                            
+                            <li><a href="https://youtu.be/PC43okH0EXc" target="_blank">Jabal Thawr Cultural District
+                                    Umrah Tour Visit Tamil Bayan</a></li>
+                            <li><a href="https://youtu.be/48kM0jzlnNk" target="_blank">Umrah Bayan in Tamil Prophet
+                                    Masjid Shythan Stoning Arafah Area Live Telecast ghar esoor makkah tour</a></li>
+                            <li><a href="https://youtu.be/wSI6vxLsQYU" target="_blank">Masjid al Namirah Arabic مسجد
+                                    نمرة is a mosque in Wadi Uranah near Mecca in the Makkah Province of S</a></li>
+                            <li><a href="https://youtu.be/OmPpYpfgrUQ" target="_blank">Tamil Umrah Bayan steps king
+                                    haroon rashid wife subidha series of wells, reservoirs and artificial</a></li>
+                            <li><a href="https://youtu.be/Ixs4xPWH6HU" target="_blank">Ibrahim A S place of sacrifice
+                                    for Ismail A S , Makkah, Saudi Arabia</a></li>
+                            <li><a href="https://youtu.be/9I3XjWaEjtg" target="_blank">Jabal al Nour Arabic جَبَل
+                                    ٱلنُّوْر, romanized Jabal an Nūr, lit  'Mountain of the Light' or 'Hill o</a></li>
+                            <li><a href="https://youtu.be/9tFv99ilJYI" target="_blank">Story of Prophet Muhammad & Lady
+                                    Khadijah Tamil Bayan she Woman of Beauty, Strength & Faith marriage</a></li>
+                            <li><a href="https://youtu.be/idebR_MXdPA" target="_blank">Prophet muhammad life story
+                                    birth, family, marriage, spiritual encounter, and mission in Mecca</a></li>
+                            <li><a href="https://youtu.be/Lghlf-QQb98" target="_blank">Backbite to say unpleasant and
+                                    unkind things about someone who is not there backbite about colleague</a></li>
+                            <li><a href="https://youtu.be/wXPe19RJtoY" target="_blank">What Happens After Death? Life in
+                                    the Grave – Islamic Insights angel of death</a></li>
+                            <li><a href="https://youtu.be/_0MJchKUHd4" target="_blank">Companions of the Prophet
+                                    History, Sahabah, & Hadith Aqdas Ral</a></li>
+                            <li><a href="https://youtu.be/qoJBGlg5isQ" target="_blank">The Day of Arafah Arabic يوم
+                                    عرفة, romanized Yawm 'Arafah is Islamic holiday bayan arabian peninsula</a></li>
+                            <li><a href="https://youtu.be/Z1I21ty3-qc" target="_blank">The Treaty of Hudaybiyyah was an
+                                    event that took place during the lifetime of the Islamic prophet</a></li>
+                            <li><a href="https://youtu.be/ZoLjGp15yIs" target="_blank">Ikrima ibn Abī Jahl ʿAmr ibn
+                                    Hishām was a leading opponent turned companion of the Islamic prophet</a></li>
+                            <li><a href="https://youtu.be/EYzGNHHfLNY" target="_blank">Mina Arabic مِنَى, Minā, also
+                                    known as Muna Arabic مُنَى, Munā, City of Tents Hajj Umra Pilgrimage</a></li>
+                            <li><a href="https://youtu.be/2zX5eACHpk4" target="_blank">Taif is a city and governorate in
+                                    the Makkah Region of Saudi Arabia Welcome to Taif Lying just east.</a></li>
+                            <li><a href="https://youtu.be/sBjEQj8aA8I" target="_blank">Taif in Saudi Arabia If so, it is
+                                    a beautiful and cool city located in the Makkah region</a></li>
+                            <li><a href="https://youtu.be/8FNpp0ah_zE" target="_blank">The Complete History Of Thawr
+                                    Cave Jabal Thawr is a mountain in Saudi Arabia</a></li>
+                            <li><a href="https://youtu.be/dGp7axEDMrU" target="_blank">Life history of prophet muhammad
+                                    from birth to death muhammad ﷺ life story founder Islam Tamil Bayan</a></li>
+                            <li><a href="https://youtu.be/qj6W3QEgyJY" target="_blank">Camel mentioned in Qur’an Allah
+                                    says in the Holy Qur’an Do they not look at the camel, how created</a></li>
+                            <li><a href="https://youtu.be/btJBPGnuk9g" target="_blank">Great Mosque of Mecca, Arabic al
+                                    Masjid al Ḥarām, also called Holy Mosque or Haram Mosque, mosque in</a></li>
+
                         </ul>
                     </div>
                 </div>
@@ -668,9 +759,12 @@
                     <div class="category-title">Notes</div>
                     <div class="category-content">
                         <ul>
-                            <li><a href="https://itclasssl.wixsite.com/icttraining/post/questions-and-answers-about-prophet" target="_blank">💥 Prophet SAW</a></li>
-                            <li><a href="https://itclasssl.wixsite.com/icttraining/post/100-questions-on-the-glorious-quran" target="_blank">💥 Al-Quran</a></li>
-                            <li><a href="https://itclasssl.wixsite.com/icttraining/post/ahlaq-in-islam-questions-and-answers" target="_blank">💥 Al-Akhlaq in Islam</a></li>
+                            <li><a href="https://itclasssl.wixsite.com/icttraining/post/questions-and-answers-about-prophet"
+                                    target="_blank">💥 Prophet SAW</a></li>
+                            <li><a href="https://itclasssl.wixsite.com/icttraining/post/100-questions-on-the-glorious-quran"
+                                    target="_blank">💥 Al-Quran</a></li>
+                            <li><a href="https://itclasssl.wixsite.com/icttraining/post/ahlaq-in-islam-questions-and-answers"
+                                    target="_blank">💥 Al-Akhlaq in Islam</a></li>
                         </ul>
                     </div>
                 </div>
@@ -688,8 +782,8 @@
     </div>
 
     <script>
-        document.querySelectorAll('.subject-title').forEach(function(subjectTitle) {
-            subjectTitle.addEventListener('click', function() {
+        document.querySelectorAll('.subject-title').forEach(function (subjectTitle) {
+            subjectTitle.addEventListener('click', function () {
                 const content = this.nextElementSibling;
                 if (content.style.display === "none" || content.style.display === "") {
                     content.style.display = "block";
@@ -699,8 +793,8 @@
             });
         });
 
-        document.querySelectorAll('.category-title').forEach(function(categoryTitle) {
-            categoryTitle.addEventListener('click', function() {
+        document.querySelectorAll('.category-title').forEach(function (categoryTitle) {
+            categoryTitle.addEventListener('click', function () {
                 const content = this.nextElementSibling;
                 if (content.style.display === "none" || content.style.display === "") {
                     content.style.display = "block";
@@ -711,4 +805,5 @@
         });
     </script>
 </body>
+
 </html>
