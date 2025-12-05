@@ -80,7 +80,8 @@ a:hover {
 .sub-menu {
     display: none;
     position: absolute;
-    top: 100%;
+    top: calc(100% - 1px);
+    /* avoid a 1px gap that breaks hover when moving mouse */
     left: 0;
     background-color: #000000;
     min-width: 200px;
@@ -88,21 +89,43 @@ a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.menu-item:hover>.sub-menu {
+/* ensure submenu shows when parent hovered or keyboard-focused */
+.menu-item:hover>.sub-menu,
+.menu-item:focus-within>.sub-menu {
     display: block;
 }
 
+/* style submenu items and their hover */
+.sub-menu .menu-item {
+    padding: 0;
+    /* anchor will handle padding for consistent hit area */
+}
+
+/* make anchors fill the item area and receive hover */
+.sub-menu a {
+    display: block;
+    padding: 10px 15px;
+    /* same spacing as top-level */
+    color: white;
+    text-decoration: none;
+}
+
+/* highlight submenu items on hover */
+.sub-menu .menu-item:hover,
+.sub-menu a:hover {
+    background-color: #444d56;
+}
+
+/* nested sub-menus (flyouts) */
 .sub-menu .sub-menu {
     left: 100%;
     top: 0;
 }
 
-.sub-menu .menu-item {
-    padding: 10px 15px;
-}
-
-.sub-menu a {
-    padding: 5px 0;
+/* small accessibility/UX nicety: keep submenu visible on focus too */
+.sub-menu a:focus {
+    outline: none;
+    background-color: #444d56;
 }
 
 /* Social Links */
