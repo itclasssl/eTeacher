@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     Courses
                     <div class="sub-menu">
                         <div class="menu-item">
-                            Local syllabus >
+                            <a href="#">Local syllabus ></a>
                             <div class="sub-menu">
                                 <a href="#">Grade 1</a>
                                 <a href="#">Grade 2</a>
@@ -28,8 +28,8 @@ document.addEventListener("DOMContentLoaded", function () {
                             </div>
                         </div>
                         <div class="menu-item">
-                            British Curriculum >
-                            <div class="sub-menu">
+                            <a href="#">British Curriculum ></a>
+                            <div class="sub-menu"> 
                                 <a href="#">Grade 1</a>
                                 <a href="#">Grade 2</a>
                                 <a href="Grade-3-BC.html">Grade 3 ></a>
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             </div>
                         </div>
                         <div class="menu-item">
-                            ICT
+                            <a href="#">ICT ></a>
                             <div class="sub-menu">
                                 <a href="#">School</a>
                                 <a href="#">University</a>
