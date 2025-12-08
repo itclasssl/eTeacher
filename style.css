@@ -237,7 +237,8 @@ a:hover {
 /* Index Page Specific Styles */
 .hero {
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://yourimageurl.com/hero-image.jpg');
-    background-color: #333; /* Fallback color */
+    background-color: #333;
+    /* Fallback color */
     background-size: cover;
     background-position: center;
     color: white;
@@ -371,9 +372,4 @@ a:hover {
     background-color: #E64A19;
     transform: scale(1.05);
     text-decoration: none;
-}
-
-.hero .text-3d,
-.hero .text-3d-p {
-    color: black !important;
 }
