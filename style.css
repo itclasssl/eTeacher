@@ -236,8 +236,8 @@ a:hover {
 
 /* Index Page Specific Styles */
 .hero {
-    background-image: url('https://yourimageurl.com/hero-image.jpg');
-    /* Placeholder URL from original file */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://yourimageurl.com/hero-image.jpg');
+    background-color: #333; /* Fallback color */
     background-size: cover;
     background-position: center;
     color: white;
