@@ -1,3 +1,41 @@
+# ============================================
+# robots.txt — Student Learning Hub
+# https://itclasssl.github.io/eTeacher/
+# ============================================
+
+# --- Google ---
+User-agent: Googlebot
+Allow: /
+
+# --- Bing / Microsoft ---
+User-agent: Bingbot
+Allow: /
+
+# --- AI Search Crawlers ---
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+# --- General (all other bots) ---
 User-agent: *
 Allow: /
+
+# --- Sitemap location ---
 Sitemap: https://itclasssl.github.io/eTeacher/sitemap.xml
