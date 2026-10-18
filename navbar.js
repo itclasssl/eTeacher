@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                 <a href="Grade-3-BC.html">Grade 3 ></a>
                                 <a href="#">Grade 4</a>
                                 <a href="Grade-5-BC.html">Grade 5 ></a>
-                                <a href="#">Grade 6</a>
+                                <a href="Grade-6-BC.html">Grade 6 ></a>
                                 <a href="#">Grade 7</a>
                                 <a href="#">Grade 8</a>
                                 <a href="#">Grade 9</a>
